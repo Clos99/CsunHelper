@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CSUN_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Oh-9qz">
+                                <rect key="frame" x="0.0" y="56" width="375" height="612"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IEL-NT-xHG">
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KeE-Cm-0OE"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPD-YJ-Uus">
+                                <rect key="frame" x="325" y="108" width="56" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="d0p-bB-RMu"/>
+                                    <constraint firstAttribute="width" constant="56" id="ih0-gc-dnA"/>
+                                </constraints>
+                                <state key="normal" image="matty.png"/>
+                                <connections>
+                                    <action selector="matadorClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M6m-uF-nLE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IEL-NT-xHG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="AIU-Fw-6hW"/>
+                            <constraint firstItem="IEL-NT-xHG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="KBZ-D0-xou"/>
+                            <constraint firstItem="sPD-YJ-Uus" firstAttribute="top" secondItem="IEL-NT-xHG" secondAttribute="bottom" constant="52" id="LK6-EF-2AJ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gcf-Oh-9qz" secondAttribute="bottom" constant="-1" id="Lgk-IF-0UD"/>
+                            <constraint firstItem="IEL-NT-xHG" firstAttribute="leading" secondItem="gcf-Oh-9qz" secondAttribute="leading" id="aAf-zm-w1y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IEL-NT-xHG" secondAttribute="trailing" constant="-22" id="nbf-vl-59T"/>
+                            <constraint firstItem="gcf-Oh-9qz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="txs-91-eR7"/>
+                            <constraint firstItem="IEL-NT-xHG" firstAttribute="trailing" secondItem="sPD-YJ-Uus" secondAttribute="trailing" id="wDS-2s-v0N"/>
+                            <constraint firstItem="gcf-Oh-9qz" firstAttribute="top" secondItem="IEL-NT-xHG" secondAttribute="bottom" id="x7j-mo-0Ms"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="gcf-Oh-9qz" id="Kek-gV-vLj"/>
+                        <outlet property="matadorLocation" destination="sPD-YJ-Uus" id="lJP-pQ-A0p"/>
+                        <outlet property="searchBar" destination="IEL-NT-xHG" id="7eb-xb-LXK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="matty.png" width="90" height="72"/>
+    </resources>
+</document>

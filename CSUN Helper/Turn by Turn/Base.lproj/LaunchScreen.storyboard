@@ -28,7 +28,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="184"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" image="CSUN Logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZQ-BO-dPw">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="184.00000000000003"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="184"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>

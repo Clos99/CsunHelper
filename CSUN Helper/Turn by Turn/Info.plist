@@ -33,12 +33,17 @@
 	<true/>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
+		<string>This application will use your location for Augmented Reality.</string>
 		<string>MKDirectionsModeCar</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>This application will use the camera for $(PRODUCT_NAME)</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>ALWAYS GETTING YOUR LOCATION</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>WHEN IN USE BAYBEH</string>
+	<string>This application will use your location for $(PRODUCT_NAME).</string>
+	<key>NSLocationWhenInUseUsageDescription </key>
+	<string>This application will use your location for $(PRODUCT_NAME).</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -50,7 +55,10 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>arkit</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

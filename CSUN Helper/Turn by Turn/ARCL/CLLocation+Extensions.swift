@@ -24,7 +24,7 @@ public struct LocationTranslation {
 
 public extension CLLocation {
     public convenience init(coordinate: CLLocationCoordinate2D, altitude: CLLocationDistance) {
-        self.init(coordinate: coordinate, altitude: altitude, horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: Date())
+        self.init(coordinate: coordinate, altitude: 1000.0, horizontalAccuracy: 0, verticalAccuracy: 5.5, timestamp: Date())
     }
 
     ///Translates distance in meters between two locations.
@@ -52,7 +52,7 @@ public extension CLLocation {
             longitudeTranslation = distanceLongitude
         }
 
-        let altitudeTranslation = location.altitude - self.altitude
+        let altitudeTranslation = location.altitude// - self.altitude
 
         return LocationTranslation(
             latitudeTranslation: latitudeTranslation,

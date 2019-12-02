@@ -17,7 +17,7 @@ open class RouteAnnotationNode: LocationNode {
     public init(location: CLLocation, color: UIColor? = .blue) {
         
         
-        let sphere = SCNSphere(radius: 5)
+        let sphere = SCNBox(width: 1, height: 0.0, length: 50, chamferRadius: 0.25)
         sphere.firstMaterial!.diffuse.contents = color
         sphere.firstMaterial!.specular.contents = UIColor.black
         sphere.firstMaterial!.lightingModel = .phong

@@ -10,8 +10,9 @@ import CoreLocation
 
 struct PointOfInterest {
     var title: String
+    var title2: String
     var latitude: CLLocationDegrees
     var longitude: CLLocationDegrees
-    var altitude: CLLocationDegrees
+    var altitude: CLLocationDistance
 
 }

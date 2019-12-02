@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,48 +15,16 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuH-WB-PK9">
-                                <rect key="frame" x="32" y="192" width="256" height="184"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SPf-fN-Yfk">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="184"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" image="CSUN Logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZQ-BO-dPw">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="184"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="8To-Wl-la2"/>
-                                    <constraint firstAttribute="width" constant="256" id="mhG-az-Y6c"/>
-                                    <constraint firstAttribute="width" secondItem="tuH-WB-PK9" secondAttribute="height" multiplier="32:23" id="nek-Ip-h3f"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8To-Wl-la2"/>
-                                        <exclude reference="mhG-az-Y6c"/>
-                                        <exclude reference="nek-Ip-h3f"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" axis="vertical">
-                                    <mask key="constraints">
-                                        <include reference="8To-Wl-la2"/>
-                                        <include reference="mhG-az-Y6c"/>
-                                        <include reference="nek-Ip-h3f"/>
-                                    </mask>
-                                </variation>
-                            </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CSUN Helper Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="t4c-0j-S0o">
+                                <rect key="frame" x="152" y="384" width="110" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="tuH-WB-PK9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5ED-ZB-iip"/>
-                            <constraint firstItem="tuH-WB-PK9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6kM-xh-DtG"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CSUN Logo" width="156" height="187"/>
+        <image name="CSUN Helper Logo.png" width="9.3599996566772461" height="11.220000267028809"/>
     </resources>
 </document>

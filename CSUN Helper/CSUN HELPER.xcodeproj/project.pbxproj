@@ -31,6 +31,35 @@
 		915DA218235D2BEC00CB708D /* citrus.png in Resources */ = {isa = PBXBuildFile; fileRef = 915DA207235D2BEC00CB708D /* citrus.png */; };
 		915DA219235D2BEC00CB708D /* bookstein.png in Resources */ = {isa = PBXBuildFile; fileRef = 915DA208235D2BEC00CB708D /* bookstein.png */; };
 		915DA21B235D2F7A00CB708D /* matty.png in Resources */ = {isa = PBXBuildFile; fileRef = 915DA21A235D2F7A00CB708D /* matty.png */; };
+		916992E023760DE600076116 /* CSUN Helper Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 916992DF23760DE600076116 /* CSUN Helper Logo.png */; };
+		91D2DA532378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA512378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig */; };
+		91D2DA542378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA522378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig */; };
+		91D2DA5A2378DBDD00D99EBD /* RouteSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA552378DBDD00D99EBD /* RouteSegment.swift */; };
+		91D2DA5B2378DBDD00D99EBD /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA562378DBDD00D99EBD /* PointOfInterest.swift */; };
+		91D2DA5C2378DBDD00D99EBD /* RouteSegmentAnnotationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA572378DBDD00D99EBD /* RouteSegmentAnnotationNode.swift */; };
+		91D2DA5D2378DBDD00D99EBD /* LocationTextAnnotationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA582378DBDD00D99EBD /* LocationTextAnnotationNode.swift */; };
+		91D2DA5E2378DBDD00D99EBD /* RouteAnnotationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA592378DBDD00D99EBD /* RouteAnnotationNode.swift */; };
+		91D2DA6A2378DBE400D99EBD /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA602378DBE400D99EBD /* SCNVector3+Extensions.swift */; };
+		91D2DA6B2378DBE400D99EBD /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA612378DBE400D99EBD /* SceneLocationEstimate.swift */; };
+		91D2DA6C2378DBE400D99EBD /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA622378DBE400D99EBD /* SceneLocationEstimate+Extensions.swift */; };
+		91D2DA6D2378DBE400D99EBD /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA632378DBE400D99EBD /* FloatingPoint+Radians.swift */; };
+		91D2DA6E2378DBE400D99EBD /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA642378DBE400D99EBD /* LocationNode.swift */; };
+		91D2DA6F2378DBE400D99EBD /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA652378DBE400D99EBD /* CGPoint+Extensions.swift */; };
+		91D2DA702378DBE400D99EBD /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA662378DBE400D99EBD /* CLLocation+Extensions.swift */; };
+		91D2DA712378DBE400D99EBD /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA672378DBE400D99EBD /* SceneLocationView.swift */; };
+		91D2DA722378DBE400D99EBD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA682378DBE400D99EBD /* LocationManager.swift */; };
+		91D2DA732378DBE400D99EBD /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA692378DBE400D99EBD /* SCNNode+Extensions.swift */; };
+		91D2DA752378DBF200D99EBD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA742378DBF200D99EBD /* art.scnassets */; };
+		91D2DA7A2378E61A00D99EBD /* AR.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA792378E61A00D99EBD /* AR.png */; };
+		91D2DA7C2378F05400D99EBD /* Jacaranda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA7B2378F05400D99EBD /* Jacaranda.jpg */; };
+		91D2DA7E2378FA5D00D99EBD /* ARCLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA7D2378FA5D00D99EBD /* ARCLViewController.swift */; };
+		91FF42C72377F09F00C24FE9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF42C62377F09F00C24FE9 /* SecondViewController.swift */; };
+		91FF42C92377F0AF00C24FE9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF42C82377F0AF00C24FE9 /* FirstViewController.swift */; };
+		91FF42CB2377F0BE00C24FE9 /* Floor2Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF42CA2377F0BE00C24FE9 /* Floor2Map.swift */; };
+		91FF42CF2377F0D300C24FE9 /* Floor3Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF42CC2377F0D200C24FE9 /* Floor3Map.swift */; };
+		91FF42D02377F0D300C24FE9 /* Floor4Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF42CD2377F0D200C24FE9 /* Floor4Map.swift */; };
+		91FF42D12377F0D300C24FE9 /* Floor1Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF42CE2377F0D300C24FE9 /* Floor1Map.swift */; };
+		91FF42D32377F0E400C24FE9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF42D22377F0E400C24FE9 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +89,36 @@
 		915DA207235D2BEC00CB708D /* citrus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = citrus.png; sourceTree = "<group>"; };
 		915DA208235D2BEC00CB708D /* bookstein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookstein.png; sourceTree = "<group>"; };
 		915DA21A235D2F7A00CB708D /* matty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matty.png; sourceTree = "<group>"; };
+		916992DF23760DE600076116 /* CSUN Helper Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CSUN Helper Logo.png"; sourceTree = SOURCE_ROOT; };
+		91D2DA512378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-AugmentedReality.release.xcconfig"; sourceTree = "<group>"; };
+		91D2DA522378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-AugmentedReality.debug.xcconfig"; sourceTree = "<group>"; };
+		91D2DA552378DBDD00D99EBD /* RouteSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegment.swift; sourceTree = "<group>"; };
+		91D2DA562378DBDD00D99EBD /* PointOfInterest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
+		91D2DA572378DBDD00D99EBD /* RouteSegmentAnnotationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentAnnotationNode.swift; sourceTree = "<group>"; };
+		91D2DA582378DBDD00D99EBD /* LocationTextAnnotationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTextAnnotationNode.swift; sourceTree = "<group>"; };
+		91D2DA592378DBDD00D99EBD /* RouteAnnotationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteAnnotationNode.swift; sourceTree = "<group>"; };
+		91D2DA602378DBE400D99EBD /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		91D2DA612378DBE400D99EBD /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		91D2DA622378DBE400D99EBD /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		91D2DA632378DBE400D99EBD /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		91D2DA642378DBE400D99EBD /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		91D2DA652378DBE400D99EBD /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		91D2DA662378DBE400D99EBD /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		91D2DA672378DBE400D99EBD /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		91D2DA682378DBE400D99EBD /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		91D2DA692378DBE400D99EBD /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		91D2DA742378DBF200D99EBD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		91D2DA762378DC3F00D99EBD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		91D2DA792378E61A00D99EBD /* AR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AR.png; sourceTree = "<group>"; };
+		91D2DA7B2378F05400D99EBD /* Jacaranda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jacaranda.jpg; sourceTree = SOURCE_ROOT; };
+		91D2DA7D2378FA5D00D99EBD /* ARCLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARCLViewController.swift; sourceTree = "<group>"; };
+		91FF42C62377F09F00C24FE9 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		91FF42C82377F0AF00C24FE9 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		91FF42CA2377F0BE00C24FE9 /* Floor2Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor2Map.swift; sourceTree = "<group>"; };
+		91FF42CC2377F0D200C24FE9 /* Floor3Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor3Map.swift; sourceTree = "<group>"; };
+		91FF42CD2377F0D200C24FE9 /* Floor4Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor4Map.swift; sourceTree = "<group>"; };
+		91FF42CE2377F0D300C24FE9 /* Floor1Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor1Map.swift; sourceTree = "<group>"; };
+		91FF42D22377F0E400C24FE9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +138,7 @@
 			children = (
 				5AC2B3811EFF6561007AF914 /* Turn by Turn */,
 				5AC2B3801EFF6561007AF914 /* Products */,
+				91D2DA502378DBB000D99EBD /* Pods */,
 				5AC2B3941EFF6796007AF914 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +155,25 @@
 			isa = PBXGroup;
 			children = (
 				5AC2B3821EFF6561007AF914 /* AppDelegate.swift */,
+				91D2DA5F2378DBE400D99EBD /* ARCL */,
 				5AC2B3841EFF6561007AF914 /* ViewController.swift */,
+				91FF42C82377F0AF00C24FE9 /* FirstViewController.swift */,
+				91FF42C62377F09F00C24FE9 /* SecondViewController.swift */,
+				91FF42D22377F0E400C24FE9 /* ThirdViewController.swift */,
+				91D2DA742378DBF200D99EBD /* art.scnassets */,
+				916992DF23760DE600076116 /* CSUN Helper Logo.png */,
+				91D2DA7B2378F05400D99EBD /* Jacaranda.jpg */,
+				91D2DA792378E61A00D99EBD /* AR.png */,
+				91D2DA582378DBDD00D99EBD /* LocationTextAnnotationNode.swift */,
+				91D2DA7D2378FA5D00D99EBD /* ARCLViewController.swift */,
+				91D2DA562378DBDD00D99EBD /* PointOfInterest.swift */,
+				91D2DA592378DBDD00D99EBD /* RouteAnnotationNode.swift */,
+				91D2DA552378DBDD00D99EBD /* RouteSegment.swift */,
+				91D2DA572378DBDD00D99EBD /* RouteSegmentAnnotationNode.swift */,
+				91FF42CE2377F0D300C24FE9 /* Floor1Map.swift */,
+				91FF42CC2377F0D200C24FE9 /* Floor3Map.swift */,
+				91FF42CD2377F0D200C24FE9 /* Floor4Map.swift */,
+				91FF42CA2377F0BE00C24FE9 /* Floor2Map.swift */,
 				5AC2B3861EFF6561007AF914 /* Main.storyboard */,
 				915DA21A235D2F7A00CB708D /* matty.png */,
 				915DA1F7235D2BEC00CB708D /* Pins */,
@@ -109,6 +187,7 @@
 		5AC2B3941EFF6796007AF914 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91D2DA762378DC3F00D99EBD /* CoreLocation.framework */,
 				5AC2B3951EFF6796007AF914 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -136,6 +215,32 @@
 				915DA208235D2BEC00CB708D /* bookstein.png */,
 			);
 			path = Pins;
+			sourceTree = "<group>";
+		};
+		91D2DA502378DBB000D99EBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91D2DA512378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig */,
+				91D2DA522378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		91D2DA5F2378DBE400D99EBD /* ARCL */ = {
+			isa = PBXGroup;
+			children = (
+				91D2DA602378DBE400D99EBD /* SCNVector3+Extensions.swift */,
+				91D2DA612378DBE400D99EBD /* SceneLocationEstimate.swift */,
+				91D2DA622378DBE400D99EBD /* SceneLocationEstimate+Extensions.swift */,
+				91D2DA632378DBE400D99EBD /* FloatingPoint+Radians.swift */,
+				91D2DA642378DBE400D99EBD /* LocationNode.swift */,
+				91D2DA652378DBE400D99EBD /* CGPoint+Extensions.swift */,
+				91D2DA662378DBE400D99EBD /* CLLocation+Extensions.swift */,
+				91D2DA672378DBE400D99EBD /* SceneLocationView.swift */,
+				91D2DA682378DBE400D99EBD /* LocationManager.swift */,
+				91D2DA692378DBE400D99EBD /* SCNNode+Extensions.swift */,
+			);
+			path = ARCL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +271,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = "Kyle Lee";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					5AC2B37E1EFF6561007AF914 = {
 						CreatedOnToolsVersion = 9.0;
@@ -204,12 +309,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D2DA7A2378E61A00D99EBD /* AR.png in Resources */,
 				915DA212235D2BEC00CB708D /* sequoia.png in Resources */,
 				915DA216235D2BEC00CB708D /* Eucalyptus.png in Resources */,
 				915DA217235D2BEC00CB708D /* redwood.png in Resources */,
 				915DA209235D2BEC00CB708D /* sagebrush.png in Resources */,
 				5AC2B38D1EFF6561007AF914 /* LaunchScreen.storyboard in Resources */,
 				915DA211235D2BEC00CB708D /* valley.png in Resources */,
+				91D2DA532378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig in Resources */,
 				915DA21B235D2F7A00CB708D /* matty.png in Resources */,
 				915DA20B235D2BEC00CB708D /* chaparall.png in Resources */,
 				915DA20F235D2BEC00CB708D /* nordhoff.png in Resources */,
@@ -217,7 +324,10 @@
 				915DA210235D2BEC00CB708D /* Jacaranda Hall.png in Resources */,
 				915DA219235D2BEC00CB708D /* bookstein.png in Resources */,
 				915DA213235D2BEC00CB708D /* oviatt.png in Resources */,
+				916992E023760DE600076116 /* CSUN Helper Logo.png in Resources */,
+				91D2DA542378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig in Resources */,
 				915DA218235D2BEC00CB708D /* citrus.png in Resources */,
+				91D2DA752378DBF200D99EBD /* art.scnassets in Resources */,
 				5AC2B38A1EFF6561007AF914 /* Assets.xcassets in Resources */,
 				915DA215235D2BEC00CB708D /* live oak.png in Resources */,
 				915DA20E235D2BEC00CB708D /* sierra.png in Resources */,
@@ -225,6 +335,7 @@
 				915DA20A235D2BEC00CB708D /* src.png in Resources */,
 				915DA20D235D2BEC00CB708D /* cypress.png in Resources */,
 				915DA214235D2BEC00CB708D /* bayramian.png in Resources */,
+				91D2DA7C2378F05400D99EBD /* Jacaranda.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +346,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D2DA732378DBE400D99EBD /* SCNNode+Extensions.swift in Sources */,
+				91D2DA712378DBE400D99EBD /* SceneLocationView.swift in Sources */,
+				91FF42C92377F0AF00C24FE9 /* FirstViewController.swift in Sources */,
+				91FF42D32377F0E400C24FE9 /* ThirdViewController.swift in Sources */,
+				91D2DA5B2378DBDD00D99EBD /* PointOfInterest.swift in Sources */,
+				91D2DA6E2378DBE400D99EBD /* LocationNode.swift in Sources */,
+				91FF42CF2377F0D300C24FE9 /* Floor3Map.swift in Sources */,
+				91D2DA6A2378DBE400D99EBD /* SCNVector3+Extensions.swift in Sources */,
+				91D2DA722378DBE400D99EBD /* LocationManager.swift in Sources */,
+				91D2DA6F2378DBE400D99EBD /* CGPoint+Extensions.swift in Sources */,
+				91D2DA6C2378DBE400D99EBD /* SceneLocationEstimate+Extensions.swift in Sources */,
+				91FF42CB2377F0BE00C24FE9 /* Floor2Map.swift in Sources */,
+				91D2DA5D2378DBDD00D99EBD /* LocationTextAnnotationNode.swift in Sources */,
+				91D2DA702378DBE400D99EBD /* CLLocation+Extensions.swift in Sources */,
+				91FF42C72377F09F00C24FE9 /* SecondViewController.swift in Sources */,
+				91D2DA7E2378FA5D00D99EBD /* ARCLViewController.swift in Sources */,
+				91FF42D12377F0D300C24FE9 /* Floor1Map.swift in Sources */,
+				91D2DA6B2378DBE400D99EBD /* SceneLocationEstimate.swift in Sources */,
 				5AC2B3851EFF6561007AF914 /* ViewController.swift in Sources */,
+				91D2DA5C2378DBDD00D99EBD /* RouteSegmentAnnotationNode.swift in Sources */,
+				91FF42D02377F0D300C24FE9 /* Floor4Map.swift in Sources */,
 				5AC2B3831EFF6561007AF914 /* AppDelegate.swift in Sources */,
+				91D2DA5E2378DBDD00D99EBD /* RouteAnnotationNode.swift in Sources */,
+				91D2DA5A2378DBDD00D99EBD /* RouteSegment.swift in Sources */,
+				91D2DA6D2378DBE400D99EBD /* FloatingPoint+Radians.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,12 +503,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CKMBVR96GK;
+				DEVELOPMENT_TEAM = CT85KSS29B;
 				INFOPLIST_FILE = "Turn by Turn/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codepro.map-kit-tutorial-1345H";
+				PRODUCT_BUNDLE_IDENTIFIER = com.csun.helperE;
 				PRODUCT_NAME = "CSUN Helper";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -383,12 +517,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CKMBVR96GK;
+				DEVELOPMENT_TEAM = CT85KSS29B;
 				INFOPLIST_FILE = "Turn by Turn/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codepro.map-kit-tutorial-1345H";
+				PRODUCT_BUNDLE_IDENTIFIER = com.csun.helperE;
 				PRODUCT_NAME = "CSUN Helper";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

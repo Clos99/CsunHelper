@@ -49,7 +49,7 @@ class TextNode: SCNNode {
         
         let distance = Int( round( startLocation.distance(from: endLocation)))
         
-        let textShape = SCNText(string: "\(distance) m", extrusionDepth: 1)
+        let textShape = SCNText(string: "\(distance) m", extrusionDepth: 3)
         textShape.firstMaterial!.diffuse.contents = UIColor.white
         textShape.firstMaterial!.specular.contents = UIColor.black
         textShape.firstMaterial!.lightingModel = .phong

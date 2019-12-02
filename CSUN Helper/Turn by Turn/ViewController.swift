@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     var srcPin = CustomPointAnnotation()
     var usuPin = CustomPointAnnotation()
     
-    @IBOutlet weak var directionsLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var matadorLocation: UIButton!
@@ -35,17 +34,12 @@ class ViewController: UIViewController {
         userLocation()
     }
     
-    @IBAction func searchButtom(_ sender: Any) {
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.delegate = self
-        present(searchController, animated: true, completion: nil)
-    }
-    
+
     
     let locationManager = CLLocationManager()
     var currentCoordinate: CLLocationCoordinate2D!
     
-    var steps = [MKRouteStep]()
+    var steps = [MKRoute.Step]()
     let speechSynthesizer = AVSpeechSynthesizer()
     
     var stepCounter = 0
@@ -56,7 +50,7 @@ class ViewController: UIViewController {
         
         let distanceSpan: CLLocationDegrees = 500
         let bsCSUNCAmpusLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(34.241464890869224, -118.52937457790358)
-        mapView.setRegion(MKCoordinateRegionMakeWithDistance(bsCSUNCAmpusLocation, distanceSpan, distanceSpan), animated: true)
+        mapView.setRegion(MKCoordinateRegion(center: bsCSUNCAmpusLocation, latitudinalMeters: distanceSpan, longitudinalMeters: distanceSpan), animated: true)
         
        
         locationManager.requestAlwaysAuthorization()
@@ -68,6 +62,7 @@ class ViewController: UIViewController {
         jacarandaPin.coordinate = jacarandaCoordinates
         jacarandaPin.title = "Jacaranda Hall"
         jacarandaPin.imageName = "Jacaranda Hall.png"
+    
         mapView.addAnnotation(jacarandaPin)
         
         let libraryCoordinates = CLLocationCoordinate2DMake(34.240032, -118.529318)
@@ -167,6 +162,7 @@ class ViewController: UIViewController {
         mapView.addAnnotation(usuPin)
         //userLocation()
     }
+  
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         if !(annotation is MKPointAnnotation){
@@ -190,7 +186,7 @@ class ViewController: UIViewController {
         let sourcePlacemark = MKPlacemark(coordinate: currentCoordinate)
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
         
-        let directionsRequest = MKDirectionsRequest()
+        let directionsRequest = MKDirections.Request()
         directionsRequest.source = sourceMapItem
         directionsRequest.destination = destination
         directionsRequest.transportType = .walking
@@ -200,7 +196,7 @@ class ViewController: UIViewController {
             guard let response = response else { return }
             guard let primaryRoute = response.routes.first else { return }
             
-            self.mapView.add(primaryRoute.polyline)
+            self.mapView.addOverlay(primaryRoute.polyline)
             
         self.locationManager.monitoredRegions.forEach({ self.locationManager.stopMonitoring(for: $0) })
             
@@ -214,11 +210,10 @@ class ViewController: UIViewController {
                                               identifier: "\(i)")
                 self.locationManager.startMonitoring(for: region)
                 let circle = MKCircle(center: region.center, radius: region.radius)
-                self.mapView.add(circle)
+                self.mapView.addOverlay(circle)
             }
             
-            let initialMessage = "In \(self.steps[0].distance) meters, \(self.steps[0].instructions) then in \(self.steps[1].distance) meters, \(self.steps[1].instructions)."
-           // self.directionsLabel.text = initialMessage
+            let initialMessage = "In \(self.steps[0].distance) meters, \(self.steps[0].instructions) \(self.steps[1].instructions)."
             let speechUtterance = AVSpeechUtterance(string: initialMessage)
             self.speechSynthesizer.speak(speechUtterance)
             self.stepCounter += 1
@@ -232,7 +227,7 @@ class ViewController: UIViewController {
           
            private func userLocation(){
                guard let coordinate = locationManager.location?.coordinate else{return}
-               let region = MKCoordinateRegionMakeWithDistance(coordinate, 200, 200)
+            let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
                mapView.setRegion(region, animated: true)
            }
            
@@ -243,7 +238,7 @@ class ViewController: UIViewController {
            }
            
            private func zoomToLatestLocation(with coordinate: CLLocationCoordinate2D) {
-               let zoomRegion = MKCoordinateRegionMakeWithDistance(coordinate, 200, 200)
+            let zoomRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 200, longitudinalMeters: 200)
                mapView.setRegion(zoomRegion, animated: true)
            }
        
@@ -264,12 +259,10 @@ extension ViewController: CLLocationManagerDelegate {
         if stepCounter < steps.count {
             let currentStep = steps[stepCounter]
             let message = "In \(currentStep.distance) meters, \(currentStep.instructions)"
-            directionsLabel.text = message
             let speechUtterance = AVSpeechUtterance(string: message)
             speechSynthesizer.speak(speechUtterance)
         } else {
             let message = "Arrived at destination"
-           // directionsLabel.text = message
             let speechUtterance = AVSpeechUtterance(string: message)
             speechSynthesizer.speak(speechUtterance)
             stepCounter = 0
@@ -283,10 +276,11 @@ extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.mapView.removeOverlays(mapView.overlays)
         searchBar.endEditing(true)
-        let localSearchRequest = MKLocalSearchRequest()
+        let localSearchRequest = MKLocalSearch.Request()
         localSearchRequest.naturalLanguageQuery = searchBar.text
         let region = MKCoordinateRegion(center: currentCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         localSearchRequest.region = region
+        userLocation()
         let localSearch = MKLocalSearch(request: localSearchRequest)
         localSearch.start { (response, _) in
             guard let response = response else { return }

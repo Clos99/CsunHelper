@@ -9,11 +9,13 @@
 import UIKit
 import MapKit
 import CoreLocation
+import ARKit
 
 @available(iOS 11.0, *)
 class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     
-    
+
+    @IBOutlet weak var resetButton: UIButton!
     var locationManager: CLLocationManager!
     var latestLocation: CLLocation?
     
@@ -28,13 +30,13 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        toggleResetButtonStatus()
         setupLocation()
         
         setupPOIs()
         
         setupARScene()
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,8 +65,36 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         
         sceneLocationView.frame = view.bounds
     }
+    func toggleResetButtonStatus() {
+        if selectedPOI == nil {
+            hideResetButton()
+        }
+        else {
+            showResetButton()
+        }
+    }
     
+    func hideResetButton() {
+        // hide
+        resetButton.tintColor = .clear
+        resetButton.isEnabled = false
+        resetButton.isAccessibilityElement = false
+    }
     
+    func showResetButton() {
+        // show
+        resetButton.tintColor = .blue
+        resetButton.isEnabled = true
+        resetButton.isAccessibilityElement = true
+    }
+/*    @IBAction func resetButtonPressed(_ sender: Any) {
+        resetARScene()
+    }*/
+    
+
+    @IBAction func resetButtonPressed(_ sender: Any) {
+    resetARScene()
+    }
     // MARK: AR scene actions
     
     @objc
@@ -149,10 +179,78 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         
         // formulate natural language query for nearby POIs
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery =  "Restaurants"
+        request.naturalLanguageQuery =  "Lecture Halls"
         request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
-                                            latitudinalMeters: 50.0,
-                                            longitudinalMeters: 50.0)
+                                            latitudinalMeters: 0.05,
+                                            longitudinalMeters: 0.05)
+        
+        // getting POIs
+        let search = MKLocalSearch(request: request)
+        search.start {
+            (response, error) in
+            
+            guard let response = response else {
+                if let error = error {
+                    // show alert with error and ok button for reset
+                    print("Search error: \(error)")
+
+                    self.presentConfirmationAlertViewWith(
+                        title: "POIs Error",
+                        message: "Could not fetch POIS near your current location.",
+                        handler: { action in
+                            self.resetARScene()
+                    })
+                }
+                return
+            }
+
+            // add POIs to AR scene
+            self.pois = []
+            self.addPOIsToARScene(response.mapItems)
+        }
+    }
+    func getMorePOIs() {
+        
+        // formulate natural language query for nearby POIs
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery =  "Educational Buildings"
+        request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
+                                            latitudinalMeters: 0.05,
+                                            longitudinalMeters: 0.05)
+        
+        // getting POIs
+        let search = MKLocalSearch(request: request)
+        search.start {
+            (response, error) in
+            
+            guard let response = response else {
+                if let error = error {
+                    // show alert with error and ok button for reset
+                    print("Search error: \(error)")
+
+                    self.presentConfirmationAlertViewWith(
+                        title: "POIs Error",
+                        message: "Could not fetch POIS near your current location.",
+                        handler: { action in
+                            self.resetARScene()
+                    })
+                }
+                return
+            }
+
+            // add POIs to AR scene
+            self.pois = []
+            self.addPOIsToARScene(response.mapItems)
+        }
+    }
+    func getLibraryPOI() {
+        
+        // formulate natural language query for nearby POIs
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery =  "Academic Library"
+        request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
+                                            latitudinalMeters: 0.05,
+                                            longitudinalMeters: 0.05)
         
         // getting POIs
         let search = MKLocalSearch(request: request)
@@ -182,14 +280,15 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     
     func addPOIsToARScene(_ items: [MKMapItem]) {
         for item in items {
-            let location = CLLocation(coordinate: item.placemark.coordinate, altitude: 50.0)
+            let location = CLLocation(coordinate: item.placemark.coordinate, altitude: 300)
             let distance = Int( round( self.latestLocation!.distance(from: location) ))
-            let title = "\(item.placemark.name!)\n\(distance) m"
-            
+            let title = "\(item.placemark.name!)"//\(distance) m"
+            let title2 = "\n\(distance) m"
             let poi = PointOfInterest(title: title,
+                                      title2: title2,
                                       latitude: location.coordinate.latitude,
                                       longitude: location.coordinate.longitude,
-                                      altitude: location.altitude)
+                                      altitude: 300)
             self.pois.append( poi)
             self.addPOIToARScene(poi)
         }
@@ -278,7 +377,7 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     func addPOIToARScene(_ poi: PointOfInterest) {
         // create node
         let location = CLLocation(latitude: poi.latitude, longitude: poi.longitude)
-        let text = poi.title.replacingOccurrences(of: ", ", with: "\n")
+        let text = poi.title+poi.title2//.replacingOccurrences(of: ", ", with: "\n")
         let annotationNode = LocationTextAnnotationNode(location: location, image: UIImage(named: "LocationMarker")!, text: text)
         
         // add node to AR scene
@@ -324,7 +423,7 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func addDestinationPOIToARScene(_ poi: PointOfInterest) {
-        let location = CLLocation(coordinate: CLLocationCoordinate2D(latitude: poi.latitude, longitude: poi.longitude), altitude: poi.altitude)
+        let location = CLLocation(coordinate: CLLocationCoordinate2D(latitude: poi.latitude, longitude: poi.longitude), altitude: 300)
         let routeAnnotationNode = RouteAnnotationNode(location: location, color: .red)
         
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: routeAnnotationNode)
@@ -335,16 +434,20 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         // create AR scene
         sceneLocationView = SceneLocationView()
         view.addSubview(sceneLocationView)
-        
+
         // add tap gesture recognizer to AR scene's view
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleARObjectTap(gestureRecognizer:)))
         sceneLocationView.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    
+    
     func drawARScene() {
         
         if selectedPOI == nil {
             getPOIs()
+            getMorePOIs()
+            getLibraryPOI()
         }
         else {
             if latestLocation != nil {
@@ -364,7 +467,7 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         drawnLocationNodes = []
-        
+        toggleResetButtonStatus()
         drawARScene()
     }
     
@@ -372,6 +475,8 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         selectedPOI = nil
         clearNodesAndRedrawARScene()
     }
+        
+
 
     // MARK: Alert views
 
@@ -382,11 +487,13 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func presentPOIAlertViewfor(poi: PointOfInterest) {
-        let alert = UIAlertController(title: poi.title,
+        if poi.title == "Jacaranda Hall" {
+        let alert = UIAlertController(title: poi.title+poi.title2,
                                       message: "",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
+
         alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
             self.selectedPOI = poi
             self.clearNodesAndRedrawARScene()
@@ -395,6 +502,22 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
             
             self.performSegue(withIdentifier: "VC2", sender: self)
+        }))
+        }
+        let alert = UIAlertController(title: poi.title+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
+            
+            self.performSegue(withIdentifier: "VC1", sender: self)
         }))
         
 

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     var sierraPin = CustomPointAnnotation()
     var srcPin = CustomPointAnnotation()
     var usuPin = CustomPointAnnotation()
+    var wabaPin = CustomPointAnnotation()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
@@ -161,6 +162,14 @@ class ViewController: UIViewController {
         usuPin.imageName = "usu.png"
         mapView.addAnnotation(usuPin)
         //userLocation()
+        
+        let wabaCoordinates = CLLocationCoordinate2D(34.2358, -118.5348)
+        wabaPin.coordinate = wabaCoordinates
+        wabaPin.title = "WaBa Grill"
+        //wabaPin.imageName = "*insert waba grill photo*"
+        mapView.addAnnotation(wabaPin)
+        
+        
     }
   
     
@@ -183,9 +192,9 @@ class ViewController: UIViewController {
     }
     
     func getDirections(to destination: MKMapItem) {
+	
         let sourcePlacemark = MKPlacemark(coordinate: currentCoordinate)
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
-        
         let directionsRequest = MKDirections.Request()
         directionsRequest.source = sourceMapItem
         directionsRequest.destination = destination

@@ -163,7 +163,7 @@ class ViewController: UIViewController {
         mapView.addAnnotation(usuPin)
         //userLocation()
         
-        let wabaCoordinates = CLLocationCoordinate2D(34.2358, -118.5348)
+        let wabaCoordinates = CLLocationCoordinate2DMake(34.2358, -118.5348)
         wabaPin.coordinate = wabaCoordinates
         wabaPin.title = "WaBa Grill"
         //wabaPin.imageName = "*insert waba grill photo*"
@@ -192,14 +192,14 @@ class ViewController: UIViewController {
     }
     
     func getDirections(to destination: MKMapItem) {
-	
+        
         let sourcePlacemark = MKPlacemark(coordinate: currentCoordinate)
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
         let directionsRequest = MKDirections.Request()
         directionsRequest.source = sourceMapItem
         directionsRequest.destination = destination
         directionsRequest.transportType = .walking
-        
+        steps =  [MKRoute.Step]()
         let directions = MKDirections(request: directionsRequest)
         directions.calculate { (response, _) in
             guard let response = response else { return }

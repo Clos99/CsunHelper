@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,6 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfs-jU-OA6">
+                                <rect key="frame" x="0.0" y="55" width="375" height="515"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-WW-TR5">
+                                        <rect key="frame" x="21" y="58" width="88" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Restaurants"/>
+                                        <connections>
+                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n4u-Rb-vKn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-aO-rpn">
+                                        <rect key="frame" x="21" y="85" width="93" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Gas Stations"/>
+                                        <connections>
+                                            <action selector="gasClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzV-IR-crK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-DA-a2O">
+                                        <rect key="frame" x="21" y="31" width="103" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Lectures Halls"/>
+                                        <connections>
+                                            <action selector="educationalClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTM-VK-FiZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Oh-9qz">
                                 <rect key="frame" x="-5" y="55" width="380" height="612"/>
                             </mapView>
@@ -50,18 +79,35 @@
                                     <segue destination="Ol3-0A-9CU" kind="show" id="jBN-7K-1an"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hq-fe-iy2">
+                                <rect key="frame" x="315" y="578" width="54" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="rFd-dZ-7Ql"/>
+                                </constraints>
+                                <state key="normal" image="menu"/>
+                                <connections>
+                                    <action selector="menuOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVa-XK-8nq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IEL-NT-xHG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Hpp-do-Yxx"/>
                             <constraint firstItem="sPD-YJ-Uus" firstAttribute="trailing" secondItem="IEL-NT-xHG" secondAttribute="trailing" id="L9P-Ep-y90"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IEL-NT-xHG" secondAttribute="trailing" constant="-20" id="N5i-9v-e5L"/>
+                            <constraint firstItem="8Hq-fe-iy2" firstAttribute="top" secondItem="hhI-og-B73" secondAttribute="top" id="ORG-iP-oNK"/>
+                            <constraint firstItem="8Hq-fe-iy2" firstAttribute="bottom" secondItem="hhI-og-B73" secondAttribute="bottom" id="QgD-Bd-zUH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gcf-Oh-9qz" secondAttribute="trailing" constant="-16" id="SdW-qk-OHe"/>
+                            <constraint firstItem="xqd-0N-OWJ" firstAttribute="trailing" secondItem="Sfs-jU-OA6" secondAttribute="trailing" id="SwO-dT-5eA"/>
+                            <constraint firstItem="xqd-0N-OWJ" firstAttribute="bottom" secondItem="Sfs-jU-OA6" secondAttribute="bottom" constant="97" id="Wxt-6z-4sN"/>
                             <constraint firstItem="IEL-NT-xHG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-18" id="cFo-T2-E1H"/>
+                            <constraint firstItem="xqd-0N-OWJ" firstAttribute="trailing" secondItem="8Hq-fe-iy2" secondAttribute="trailing" constant="6" id="egh-3y-vVg"/>
+                            <constraint firstItem="Sfs-jU-OA6" firstAttribute="leading" secondItem="xqd-0N-OWJ" secondAttribute="leading" id="fhK-rh-BMX"/>
                             <constraint firstItem="gcf-Oh-9qz" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="gF2-HX-Fo6"/>
                             <constraint firstItem="gcf-Oh-9qz" firstAttribute="top" secondItem="xqd-0N-OWJ" secondAttribute="top" constant="55" id="iqa-9i-koJ"/>
                             <constraint firstItem="sPD-YJ-Uus" firstAttribute="top" secondItem="IEL-NT-xHG" secondAttribute="bottom" constant="45" id="kVf-sf-Lbx"/>
                             <constraint firstItem="gcf-Oh-9qz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="mvK-6T-YzK"/>
+                            <constraint firstItem="Sfs-jU-OA6" firstAttribute="top" secondItem="xqd-0N-OWJ" secondAttribute="top" constant="55" id="tdo-5a-lCv"/>
                             <constraint firstItem="hhI-og-B73" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wqi-X1-mLg"/>
                             <constraint firstItem="xqd-0N-OWJ" firstAttribute="bottom" secondItem="hhI-og-B73" secondAttribute="bottom" constant="34" id="xIH-oo-yDl"/>
                         </constraints>
@@ -69,9 +115,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="B9r-Bb-dek"/>
                     <connections>
+                        <outlet property="leading" destination="mvK-6T-YzK" id="UFi-sL-nBG"/>
                         <outlet property="mapView" destination="gcf-Oh-9qz" id="Kek-gV-vLj"/>
                         <outlet property="matadorLocation" destination="sPD-YJ-Uus" id="lJP-pQ-A0p"/>
                         <outlet property="searchBar" destination="IEL-NT-xHG" id="7eb-xb-LXK"/>
+                        <outlet property="trailing" destination="N5i-9v-e5L" id="dDZ-To-lik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -581,7 +629,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="O2I-fN-yNR">
                         <barButtonItem key="rightBarButtonItem" image="xmark.circle.fill" catalog="system" style="plain" id="OcK-dn-DK4">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rAe-fx-Shq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rAe-fx-Shq">
                                 <rect key="frame" x="339" y="17" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="xmark.circle.fill" catalog="system"/>
@@ -640,6 +688,7 @@
         <image name="floor3map" width="1918" height="667"/>
         <image name="floor4map" width="1919" height="655"/>
         <image name="matty.png" width="90" height="72"/>
+        <image name="menu" width="144" height="151"/>
         <image name="second" width="30" height="30"/>
         <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>

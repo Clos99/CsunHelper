@@ -19,7 +19,6 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
     var latestLocation: CLLocation?
     
-    
     var sceneLocationView: SceneLocationView!
     
     var pois: [PointOfInterest]!
@@ -27,12 +26,11 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     var selectedPOI: PointOfInterest?
     
     var drawnLocationNodes: [LocationNode]!
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         toggleResetButtonStatus()
         setupLocation()
-        
         setupPOIs()
         
         setupARScene()
@@ -176,10 +174,9 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getPOIs() {
-        
         // formulate natural language query for nearby POIs
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery =  "Lecture Halls"
+        request.naturalLanguageQuery = "Lecture Halls"
         request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
                                             latitudinalMeters: 0.05,
                                             longitudinalMeters: 0.05)

@@ -7,7 +7,8 @@ class CustomPointAnnotation: MKPointAnnotation{
     var imageName: String!
 }
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController  {
     var jacarandaPin = CustomPointAnnotation()
     var libraryPin = CustomPointAnnotation()
     var bayramianPin = CustomPointAnnotation()
@@ -26,16 +27,56 @@ class ViewController: UIViewController {
     var srcPin = CustomPointAnnotation()
     var usuPin = CustomPointAnnotation()
     var wabaPin = CustomPointAnnotation()
-    
+    var optionString = ""
+   
+    @IBOutlet weak var trailing: NSLayoutConstraint!
+    @IBOutlet weak var leading: NSLayoutConstraint!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var matadorLocation: UIButton!
+    
+    var menuOut = false
     
     @IBAction func matadorClicked(_ sender: Any) {
         userLocation()
     }
     
+    @IBAction func educationalClicked(_ sender: Any) {
+        optionString = "Lecture Halls"
+        leading.constant = -30
+        trailing.constant = 0
+        menuOut = false
+    }
+    
+    @IBAction func gasClicked(_ sender: Any) {
+        optionString = "Gas Stations"
+        leading.constant = -30
+        trailing.constant = 0
+        menuOut = false
+    }
+    
+    @IBAction func restaurantClicked(_ sender: Any) {
+        optionString = "Restaurants"
+        leading.constant = -30
+        trailing.constant = 0
+        menuOut = false
+    }
+    
+    @IBAction func menuOptions(_ sender: Any) {
+        if menuOut == false{
+            leading.constant = 170
+            trailing.constant = -170
+            menuOut = true
+        }
+        else{
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+        }
+    }
+    
 
+    
     
     let locationManager = CLLocationManager()
     var currentCoordinate: CLLocationCoordinate2D!
@@ -48,6 +89,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
+
         
         let distanceSpan: CLLocationDegrees = 500
         let bsCSUNCAmpusLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(34.241464890869224, -118.52937457790358)
@@ -163,12 +205,12 @@ class ViewController: UIViewController {
         mapView.addAnnotation(usuPin)
         //userLocation()
         
-        let wabaCoordinates = CLLocationCoordinate2DMake(34.2358, -118.5348)
-        wabaPin.coordinate = wabaCoordinates
-        wabaPin.title = "WaBa Grill"
-        //wabaPin.imageName = "*insert waba grill photo*"
-        mapView.addAnnotation(wabaPin)
-        
+//        let wabaCoordinates = CLLocationCoordinate2DMake(34.2358, -118.5348)
+//        wabaPin.coordinate = wabaCoordinates
+//        wabaPin.title = "WaBa Grill"
+//        //wabaPin.imageName = "*insert waba grill photo*"
+//        mapView.addAnnotation(wabaPin)
+//
         
     }
   

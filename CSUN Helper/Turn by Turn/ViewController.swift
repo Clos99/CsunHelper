@@ -27,6 +27,16 @@ class ViewController: UIViewController  {
     var srcPin = CustomPointAnnotation()
     var usuPin = CustomPointAnnotation()
     var wabaPin = CustomPointAnnotation()
+    var ufcGymPin = CustomPointAnnotation()
+    var dearbparkPin = CustomPointAnnotation()
+    var northridgePacificTheaterPin = CustomPointAnnotation()
+    var sanfernMuseumPin = CustomPointAnnotation()
+    var lilfreeLibraryPin = CustomPointAnnotation()
+    var northridgemiddleSchoolPin = CustomPointAnnotation()
+    var northridgeunicenterPin = CustomPointAnnotation()
+    var wellsfargoPin = CustomPointAnnotation()
+    var gas76Pin = CustomPointAnnotation()
+    
     var optionString = ""
    
     @IBOutlet weak var trailing: NSLayoutConstraint!
@@ -205,12 +215,66 @@ class ViewController: UIViewController  {
         mapView.addAnnotation(usuPin)
         //userLocation()
         
-//        let wabaCoordinates = CLLocationCoordinate2DMake(34.2358, -118.5348)
-//        wabaPin.coordinate = wabaCoordinates
-//        wabaPin.title = "WaBa Grill"
-//        //wabaPin.imageName = "*insert waba grill photo*"
-//        mapView.addAnnotation(wabaPin)
-//
+       let wabaCoordinates = CLLocationCoordinate2DMake(34.2358, -118.5348)
+        wabaPin.coordinate = wabaCoordinates
+        wabaPin.title = "WaBa Grill"
+//        wabaPin.imageName = "*insert waba grill photo*"
+        mapView.addAnnotation(wabaPin)
+
+        let ufcGymCoordinates =
+            CLLocationCoordinate2DMake(34.2370, -118.5354)
+        ufcGymPin.coordinate = ufcGymCoordinates
+        ufcGymPin.title = "UFC GYM Northridge"
+        mapView.addAnnotation(ufcGymPin)
+        
+        let dearbparkCoordinates =
+            CLLocationCoordinate2DMake(34.2374, -118.5079)
+        dearbparkPin.coordinate = dearbparkCoordinates
+        dearbparkPin.title = "Dearborn Park"
+        mapView.addAnnotation(dearbparkPin)
+        
+        let northridgePacificTheaterCoordinates =
+            CLLocationCoordinate2DMake(34.2412, -118.5579)
+        northridgePacificTheaterPin.coordinate = northridgePacificTheaterCoordinates
+        northridgePacificTheaterPin.title = "Northridge Pacific Theaters"
+        mapView.addAnnotation(northridgePacificTheaterPin)
+        
+        let sanfernMuseumCoordinates =
+            CLLocationCoordinate2DMake(34.2355, -118.5443)
+        sanfernMuseumPin.coordinate = sanfernMuseumCoordinates
+        sanfernMuseumPin.title = "The Musuem of the San Fernando Valley"
+        mapView.addAnnotation(sanfernMuseumPin)
+        
+        let lilfreeLibraryCoordinates =
+            CLLocationCoordinate2DMake(34.2295, -118.5671)
+        lilfreeLibraryPin.coordinate = lilfreeLibraryCoordinates
+        lilfreeLibraryPin.title = "Little Free Library"
+        mapView.addAnnotation(lilfreeLibraryPin)
+        
+        let northridgemiddleschoolCoordinates =
+            CLLocationCoordinate2DMake(34.2246, -118.5234)
+        northridgemiddleSchoolPin.coordinate = northridgemiddleschoolCoordinates
+        northridgemiddleSchoolPin.title = "Northridge Middle School"
+        mapView.addAnnotation(northridgemiddleSchoolPin)
+        
+        let northridgeunicenterCoordinates =
+            CLLocationCoordinate2DMake(34.2367, -118.5370)
+        northridgeunicenterPin.coordinate = northridgeunicenterCoordinates
+        northridgeunicenterPin.title = "Northridge University Center"
+        mapView.addAnnotation(northridgeunicenterPin)
+        
+        let wellsfargoCoordinates =
+            CLLocationCoordinate2DMake(34.2399, -118.5264)
+        wellsfargoPin.coordinate = wellsfargoCoordinates
+        wellsfargoPin.title = "Wells Fargo Bank"
+        mapView.addAnnotation(wellsfargoPin)
+        
+        let gas76Coordinates =
+            CLLocationCoordinate2DMake(34.2357, -118.5272)
+        gas76Pin.coordinate = gas76Coordinates
+        gas76Pin.title = "76"
+        mapView.addAnnotation(gas76Pin)
+        
         
     }
   

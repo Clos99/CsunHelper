@@ -38,7 +38,7 @@ class ViewController: UIViewController  {
     var wellsfargoPin = CustomPointAnnotation()
     var gas76Pin = CustomPointAnnotation()
     
-    var buildingPins: [String: String] = [:]
+    var buildingPins: [String: CustomPointAnnotation] = [:]
     
     var optionString = ""
    
@@ -53,7 +53,8 @@ class ViewController: UIViewController  {
     func turnOnPins(){
         for (building, pins) in buildingPins {
             if (building == optionString){
-                mapView.addAnnotation(pins as! MKAnnotation)
+                //mapView.addAnnotation(pins.title() as! MKAnnotation)
+                mapView.addAnnotation(pins)
             }
         }
     }
@@ -64,7 +65,7 @@ class ViewController: UIViewController  {
     
     @IBAction func educationalClicked(_ sender: Any) {
         //need to test
-        optionString = "Lecture Halls"
+        optionString = "Educational Building"
         turnOnPins()
         leading.constant = -30
         trailing.constant = 0
@@ -140,7 +141,7 @@ class ViewController: UIViewController  {
         jacarandaPin.coordinate = jacarandaCoordinates
         jacarandaPin.title = "Jacaranda Hall"
         jacarandaPin.imageName = "Jacaranda Hall.png"
-        buildingPins["Educational Building"] = "jacarandaPin"
+        buildingPins["Educational Building"] = jacarandaPin
         //mapView.addAnnotation(jacarandaPin)
         
         let libraryCoordinates = CLLocationCoordinate2DMake(34.240032, -118.529318)

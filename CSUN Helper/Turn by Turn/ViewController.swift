@@ -73,14 +73,16 @@ class ViewController: UIViewController  {
     }
     
     @IBAction func gasClicked(_ sender: Any) {
-        optionString = "Gas Stations"
+        optionString = "Gas Station"
+        turnOnPins()
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
     }
     
     @IBAction func restaurantClicked(_ sender: Any) {
-        optionString = "Restaurants"
+        optionString = "Restaurant"
+        turnOnPins()
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
@@ -148,96 +150,111 @@ class ViewController: UIViewController  {
         libraryPin.coordinate = libraryCoordinates
         libraryPin.title = "Oviatt Library"
         libraryPin.imageName = "oviatt.png"
+        buildingPins["Educational Building"] = libraryPin
         //mapView.addAnnotation(libraryPin)
         
         let bayramianCoordinates = CLLocationCoordinate2DMake(34.240479, -118.530862)
         bayramianPin.coordinate = bayramianCoordinates
         bayramianPin.title = "Bayramian Hall"
         bayramianPin.imageName = "bayramian.png"
+        buildingPins["Educational Building"] = bayramianPin
+        
         //mapView.addAnnotation(bayramianPin)
         
         let liveOakCoordinates = CLLocationCoordinate2DMake(34.238448, -118.528219)
         liveOakPin.coordinate = liveOakCoordinates
         liveOakPin.title = "Live Oak Hall"
         liveOakPin.imageName = "live oak.png"
+        buildingPins["Educational Building"] = liveOakPin
         //mapView.addAnnotation(liveOakPin)
         
         let sequoiaCoordinates = CLLocationCoordinate2DMake(34.240639, -118.528243)
         sequoiaPin.coordinate = sequoiaCoordinates
         sequoiaPin.title = "Sequoia Hall"
         sequoiaPin.imageName = "sequoia.png"
+        buildingPins["Educational Building"] = sequoiaPin
         //mapView.addAnnotation(sequoiaPin)
         
         let chaparralCoordinates = CLLocationCoordinate2DMake(34.238342, -118.527128)
         chaparralPin.coordinate = chaparralCoordinates
         chaparralPin.title = "Chaparral Hall"
         chaparralPin.imageName = "chaparall.png"
+        buildingPins["Educational Building"] = chaparralPin
         //mapView.addAnnotation(chaparralPin)
         
         let citrusCoordinates = CLLocationCoordinate2DMake(34.239096, -118.528073)
         citrusPin.coordinate = citrusCoordinates
         citrusPin.title = "Citrus Hall"
         citrusPin.imageName = "citrus.png"
+        buildingPins["Educational Building"] = citrusPin
         //mapView.addAnnotation(citrusPin)
         
         let eucalyptusCoordinates = CLLocationCoordinate2DMake(34.238730, -118.528118)
         eucalyptusPin.coordinate = eucalyptusCoordinates
         eucalyptusPin.title = "Eucalyptus Hall"
         eucalyptusPin.imageName = "Eucalyptus.png"
+        buildingPins["Educational Building"] = eucalyptusPin
         //mapView.addAnnotation(eucalyptusPin)
         
         let booksteinCoordinates = CLLocationCoordinate2DMake(34.242014, -118.530814)
         booksteinPin.coordinate = booksteinCoordinates
         booksteinPin.title = "Bookstein Hall"
         booksteinPin.imageName = "bookstein.png"
+        buildingPins["Educational Building"] = booksteinPin
         //mapView.addAnnotation(booksteinPin)
         
         let cypressCoordinates = CLLocationCoordinate2DMake(34.236194, -118.529698)
         cypressPin.coordinate = cypressCoordinates
         cypressPin.title = "Cypress Hall"
         cypressPin.imageName = "cypress.png"
+        buildingPins["Educational Building"] = cypressPin
         //mapView.addAnnotation(cypressPin)
         
         let nordhoffCoordinates = CLLocationCoordinate2DMake(34.236381, -118.530644)
         nordhoffPin.coordinate = nordhoffCoordinates
         nordhoffPin.title = "Nordhoff Hall"
         nordhoffPin.imageName = "nordhoff.png"
+        buildingPins["Educational Building"] = nordhoffPin
         //mapView.addAnnotation(nordhoffPin)
         
         let redwoodCoordinates = CLLocationCoordinate2DMake(34.242042, -118.526355)
         redwoodPin.coordinate = redwoodCoordinates
         redwoodPin.title = "Redwood Hall"
         redwoodPin.imageName = "redwood.png"
-        //mapView.addAnnotation(redwoodPin)
+        buildingPins["Educational Building"] = redwoodPin
         
         let valleyCoordinates = CLLocationCoordinate2DMake(34.235926, -118.528006)
         valleyPin.coordinate = valleyCoordinates
         valleyPin.title = "Younes and Soraya Nazarian Center for the Performing Arts"
         valleyPin.imageName = "valley.png"
+        buildingPins["Educational Building"] = valleyPin
         //mapView.addAnnotation(valleyPin)
         
         let sagebrushCoordinates = CLLocationCoordinate2DMake(34.242549, -118.528469)
         sagebrushPin.coordinate = sagebrushCoordinates
         sagebrushPin.title = "Sagebrush Hall"
         sagebrushPin.imageName = "sagebrush.png"
-        //mapView.addAnnotation(sagebrushPin)
+        buildingPins["Educational Building"] = sagebrushPin
         
         let sierraCoordinates = CLLocationCoordinate2DMake(34.238220, -118.530780)
         sierraPin.coordinate = sierraCoordinates
         sierraPin.title = "Sierra Hall"
         sierraPin.imageName = "sierra.png"
+        buildingPins["Educational Building"] = sierraPin
         //mapView.addAnnotation(sierraPin)
         
         let srcCoordinates = CLLocationCoordinate2DMake(34.239856, -118.524904)
         srcPin.coordinate = srcCoordinates
         srcPin.title = "Student Recreation Center"
         srcPin.imageName = "src.png"
+        buildingPins["Educational Building"] = srcPin
         //mapView.addAnnotation(srcPin)
         
         let usuCoordinates = CLLocationCoordinate2DMake(34.240049, -118.525809)
         usuPin.coordinate = usuCoordinates
         usuPin.title = "Student Recreation Center"
         usuPin.imageName = "usu.png"
+        buildingPins["Educational Building"] = usuPin
         //mapView.addAnnotation(usuPin)
         //userLocation()
         
@@ -245,6 +262,7 @@ class ViewController: UIViewController  {
         wabaPin.coordinate = wabaCoordinates
         wabaPin.title = "WaBa Grill"
         wabaPin.imageName = "Jacaranda Hall.png"
+        buildingPins["Restaurant"] = wabaPin
         //mapView.addAnnotation(wabaPin)
             
 //        wabaPin.imageName = "*insert waba grill photo*"
@@ -311,6 +329,7 @@ class ViewController: UIViewController  {
         gas76Pin.coordinate = gas76Coordinates
         gas76Pin.title = "76"
         gas76Pin.imageName = "Jacaranda Hall.png"
+        buildingPins["Gas Station"] = gas76Pin
         //mapView.addAnnotation(gas76Pin)
         
         

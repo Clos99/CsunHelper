@@ -55,6 +55,7 @@ class ViewController: UIViewController  {
             if (building == optionString){
                 //mapView.addAnnotation(pins.title() as! MKAnnotation)
                 mapView.addAnnotation(pins)
+                print("1")
             }
         }
     }
@@ -82,6 +83,38 @@ class ViewController: UIViewController  {
     
     @IBAction func restaurantClicked(_ sender: Any) {
         optionString = "Restaurant"
+        turnOnPins()
+        leading.constant = -30
+        trailing.constant = 0
+        menuOut = false
+    }
+    
+    @IBAction func librarytClicked(_ sender: Any) {
+        optionString = "Libraries"
+        turnOnPins()
+        leading.constant = -30
+        trailing.constant = 0
+        menuOut = false
+    }
+    
+    @IBAction func parkClicked(_ sender: Any) {
+        optionString = "Parks"
+        turnOnPins()
+        leading.constant = -30
+        trailing.constant = 0
+        menuOut = false
+    }
+    
+    @IBAction func HotelClicked(_ sender: Any) {
+        optionString = "Hotels"
+        turnOnPins()
+        leading.constant = -30
+        trailing.constant = 0
+        menuOut = false
+    }
+    
+    @IBAction func schoolClicked(_ sender: Any) {
+        optionString = "Schools"
         turnOnPins()
         leading.constant = -30
         trailing.constant = 0

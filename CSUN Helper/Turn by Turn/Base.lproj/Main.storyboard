@@ -563,7 +563,7 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="542"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floor4map" translatesAutoresizingMaskIntoConstraints="NO" id="hOc-jQ-qb2">
-                                        <rect key="frame" x="0.0" y="0.0" width="375.00000000000045" height="542"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="542"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>

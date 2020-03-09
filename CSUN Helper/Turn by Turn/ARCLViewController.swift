@@ -176,7 +176,7 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     func getPOIs() {
         // formulate natural language query for nearby POIs
         let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = "Lecture Halls"
+        request.naturalLanguageQuery = passText
         request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
                                             latitudinalMeters: 0.05,
                                             longitudinalMeters: 0.05)
@@ -206,7 +206,7 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
             self.addPOIsToARScene(response.mapItems)
         }
     }
-    func getMorePOIs() {
+    /*func getMorePOIs() {
         
         // formulate natural language query for nearby POIs
         let request = MKLocalSearch.Request()
@@ -273,7 +273,7 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
             self.pois = []
             self.addPOIsToARScene(response.mapItems)
         }
-    }
+    }*/
     
     func addPOIsToARScene(_ items: [MKMapItem]) {
         for item in items {
@@ -443,8 +443,8 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         
         if selectedPOI == nil {
             getPOIs()
-            getMorePOIs()
-            getLibraryPOI()
+            //getMorePOIs()
+            //getLibraryPOI()
         }
         else {
             if latestLocation != nil {

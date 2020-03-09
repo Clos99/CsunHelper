@@ -49,6 +49,13 @@ class ViewController: UIViewController  {
     @IBOutlet weak var matadorLocation: UIButton!
     
     var menuOut = false
+    var lec = false
+    var res = false
+    var gas = false
+    var lib = false
+    var hot = false
+    var par = false
+    var sch = false
     
     func turnOnPins(){
         for (building, pins) in buildingPins {
@@ -60,6 +67,96 @@ class ViewController: UIViewController  {
         }
     }
     
+    @IBAction func camera(_ sender: Any) {
+        let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+        if lec {
+            sb.passText = "Lecture Halls"
+            present(sb, animated: true, completion: nil)
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            par = false
+            sch = false
+            
+        }
+        if res {
+            sb.passText = "Restaurants"
+            present(sb, animated: true, completion: nil)
+            lec = false
+            gas = false
+            lib = false
+            hot = false
+            par = false
+            sch = false
+            
+        }
+        if gas {
+            sb.passText = "Gas Stations"
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            lib = false
+            hot = false
+            par = false
+            sch = false
+            
+        }
+        if lib {
+            sb.passText = "Libraries"
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            hot = false
+            par = false
+            sch = false
+            
+        }
+        if hot{
+            sb.passText = "Hotels"
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            par = false
+            sch = false
+            
+            
+        }
+        if par{
+            sb.passText = "Parks"
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            sch = false
+            
+        }
+        if sch {
+            sb.passText = "Schools"
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            hot = false
+            
+        }
+        sb.passText = "Waba Grill"
+        present(sb, animated: true, completion: nil)
+        lec = false
+        res = false
+        gas = false
+        lib = false
+        hot = false
+        hot = false
+        sch = false
+    }
     @IBAction func matadorClicked(_ sender: Any) {
         userLocation()
     }
@@ -71,6 +168,8 @@ class ViewController: UIViewController  {
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
+        lec = true
+        
     }
     
     @IBAction func gasClicked(_ sender: Any) {
@@ -79,6 +178,7 @@ class ViewController: UIViewController  {
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
+        gas = true
     }
     
     @IBAction func restaurantClicked(_ sender: Any) {
@@ -87,6 +187,7 @@ class ViewController: UIViewController  {
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
+        res = true
     }
     
     @IBAction func librarytClicked(_ sender: Any) {
@@ -95,6 +196,7 @@ class ViewController: UIViewController  {
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
+        lib = true
     }
     
     @IBAction func parkClicked(_ sender: Any) {
@@ -103,6 +205,7 @@ class ViewController: UIViewController  {
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
+        par = true
     }
     
     @IBAction func HotelClicked(_ sender: Any) {
@@ -111,6 +214,7 @@ class ViewController: UIViewController  {
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
+        hot = true
     }
     
     @IBAction func schoolClicked(_ sender: Any) {
@@ -119,6 +223,7 @@ class ViewController: UIViewController  {
         leading.constant = -30
         trailing.constant = 0
         menuOut = false
+        sch = true
     }
     
     @IBAction func menuOptions(_ sender: Any) {

@@ -24,7 +24,7 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     var pois: [PointOfInterest]!
     var locationAnnotationNode2POI: [LocationTextAnnotationNode: PointOfInterest]!
     var selectedPOI: PointOfInterest?
-    
+    var passText: String!
     var drawnLocationNodes: [LocationNode]!
    
     override func viewDidLoad() {

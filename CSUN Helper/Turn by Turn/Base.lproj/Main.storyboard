@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,17 +19,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfs-jU-OA6">
                                 <rect key="frame" x="0.0" y="55" width="375" height="515"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-vz-lwl">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="building" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-vz-lwl">
                                         <rect key="frame" x="8" y="31" width="37" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="8Ti-A9-hk0"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-WW-TR5">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-WW-TR5">
                                         <rect key="frame" x="38" y="79" width="95" height="29.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="95" id="aLa-GF-1ly"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title=" Restaurants">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -37,35 +33,47 @@
                                             <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n4u-Rb-vKn"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gas" translatesAutoresizingMaskIntoConstraints="NO" id="Is4-2I-Nan">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gas" translatesAutoresizingMaskIntoConstraints="NO" id="Is4-2I-Nan">
                                         <rect key="frame" x="7" y="114" width="37" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="XUr-qK-lZT"/>
-                                            <constraint firstAttribute="width" constant="37" id="Yj9-Xw-MtP"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="TVS-Gq-S13">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="TVS-Gq-S13">
                                         <rect key="frame" x="8" y="73" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotels" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-he-Q0S">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-Dx-7ea">
+                                        <rect key="frame" x="33" y="378" width="95" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Museums">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="MuseumClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCs-jq-ktL"/>
+                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slc-IA-MBi"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hotels" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-he-Q0S">
                                         <rect key="frame" x="9" y="196" width="37" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="37" id="UYy-yR-wZI"/>
-                                            <constraint firstAttribute="height" constant="39" id="rxX-Ja-2uP"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parks" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-3y-KUN">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idh-ku-Z6F">
+                                        <rect key="frame" x="36" y="418" width="95" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Theaters">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="movieTClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDG-re-gzu"/>
+                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0rs-up-42F"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parks" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-3y-KUN">
                                         <rect key="frame" x="9" y="239" width="37" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="wnw-3O-p9o"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-7K-RhG">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-7K-RhG">
                                         <rect key="frame" x="45" y="205" width="54" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="Sfl-Ma-puq"/>
-                                            <constraint firstAttribute="width" constant="54" id="SiT-1m-ifd"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Hotels">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -73,11 +81,28 @@
                                             <action selector="HotelClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9s-mp-1w3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-Ic-DbP">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMD-AZ-ul8">
+                                        <rect key="frame" x="20" y="473" width="95" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Malls">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mallsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFc-to-uCX"/>
+                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucv-oR-MQt"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="malls" translatesAutoresizingMaskIntoConstraints="NO" id="nOd-oe-dUs" userLabel="Malls">
+                                        <rect key="frame" x="9" y="463" width="37" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Banks" translatesAutoresizingMaskIntoConstraints="NO" id="xiw-MR-nzy" userLabel="Banks">
+                                        <rect key="frame" x="9" y="322" width="37" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-Ic-DbP">
                                         <rect key="frame" x="40" y="291" width="72" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="lap-Tp-DR1"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Schools">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -85,17 +110,28 @@
                                             <action selector="schoolClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUJ-6b-6L3"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schools" translatesAutoresizingMaskIntoConstraints="NO" id="iqn-W0-jtM">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schools" translatesAutoresizingMaskIntoConstraints="NO" id="iqn-W0-jtM">
                                         <rect key="frame" x="9" y="281.5" width="37" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="a2w-eA-aea"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-NF-4YQ">
-                                        <rect key="frame" x="33" y="245" width="69" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="69" id="zFr-Jf-djM"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Museum" translatesAutoresizingMaskIntoConstraints="NO" id="C4u-zO-XnP">
+                                        <rect key="frame" x="8" y="368" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-nV-igc">
+                                        <rect key="frame" x="33" y="331" width="72" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Banks">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="banksClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XQE-Ob-xIi"/>
+                                            <action selector="schoolClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Doy-dh-XjE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-NF-4YQ">
+                                        <rect key="frame" x="33" y="244" width="69" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Parks">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -103,17 +139,17 @@
                                             <action selector="parkClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQs-qo-LR9"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="library" translatesAutoresizingMaskIntoConstraints="NO" id="Pww-SD-IqY">
-                                        <rect key="frame" x="9" y="153" width="37" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="39" id="xPW-L6-iGX"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MovieTheather" translatesAutoresizingMaskIntoConstraints="NO" id="ZiJ-mA-adZ" userLabel="Movie">
+                                        <rect key="frame" x="9" y="416" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-aO-rpn">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="library" translatesAutoresizingMaskIntoConstraints="NO" id="Pww-SD-IqY">
+                                        <rect key="frame" x="9" y="153" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-aO-rpn">
                                         <rect key="frame" x="45" y="115.5" width="87" height="36"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="ppX-gQ-MdK"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Gas Stations">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -121,8 +157,9 @@
                                             <action selector="gasClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzV-IR-crK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-DA-a2O">
-                                        <rect key="frame" x="45" y="41" width="98" height="18"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-DA-a2O">
+                                        <rect key="frame" x="45" y="35.5" width="98" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Lectures Halls">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -130,12 +167,9 @@
                                             <action selector="educationalClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTM-VK-FiZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uo-zv-GUi">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uo-zv-GUi">
                                         <rect key="frame" x="43" y="159" width="69" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="69" id="G6L-x1-XOl"/>
-                                            <constraint firstAttribute="height" constant="29" id="eW9-xs-PdF"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Libraries">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -144,44 +178,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="pbz-vz-lwl" firstAttribute="top" secondItem="Sfs-jU-OA6" secondAttribute="top" constant="31" id="1oj-ff-qT3"/>
-                                    <constraint firstItem="4uo-zv-GUi" firstAttribute="top" secondItem="VEW-aO-rpn" secondAttribute="bottom" constant="7.5" id="6AB-oo-zKy"/>
-                                    <constraint firstItem="ne5-3y-KUN" firstAttribute="top" secondItem="3ku-he-Q0S" secondAttribute="bottom" constant="4" id="6jJ-2s-P7W"/>
-                                    <constraint firstItem="Is4-2I-Nan" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leading" constant="7" id="6x6-1s-p9P"/>
-                                    <constraint firstItem="Pww-SD-IqY" firstAttribute="trailing" secondItem="3ku-he-Q0S" secondAttribute="trailing" id="8Cq-d7-t0F"/>
-                                    <constraint firstItem="Pww-SD-IqY" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leading" constant="9" id="8oc-ks-fGx"/>
-                                    <constraint firstItem="L2c-7K-RhG" firstAttribute="leading" secondItem="VEW-aO-rpn" secondAttribute="leading" id="EQX-sk-1rv"/>
-                                    <constraint firstItem="Pww-SD-IqY" firstAttribute="top" secondItem="Is4-2I-Nan" secondAttribute="bottom" id="GLP-AI-yiy"/>
-                                    <constraint firstItem="4m9-DA-a2O" firstAttribute="leading" secondItem="pbz-vz-lwl" secondAttribute="trailing" id="HdX-dc-dvh"/>
-                                    <constraint firstItem="VEW-aO-rpn" firstAttribute="leading" secondItem="4m9-DA-a2O" secondAttribute="leading" id="Jhy-RZ-D6i"/>
-                                    <constraint firstItem="TVS-Gq-S13" firstAttribute="trailing" secondItem="pbz-vz-lwl" secondAttribute="trailing" id="KtZ-Rz-6lu"/>
-                                    <constraint firstItem="AOK-WW-TR5" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leading" constant="38" id="LhX-67-6MX"/>
-                                    <constraint firstItem="chy-NF-4YQ" firstAttribute="centerY" secondItem="ne5-3y-KUN" secondAttribute="centerY" id="N82-4f-iCf"/>
-                                    <constraint firstItem="iqn-W0-jtM" firstAttribute="leading" secondItem="ne5-3y-KUN" secondAttribute="leading" id="PSm-SI-fqg"/>
-                                    <constraint firstItem="iqn-W0-jtM" firstAttribute="top" secondItem="ne5-3y-KUN" secondAttribute="bottom" constant="2.5" id="PrM-Ov-WhV"/>
-                                    <constraint firstItem="L2c-7K-RhG" firstAttribute="top" secondItem="4uo-zv-GUi" secondAttribute="bottom" constant="17" id="RM6-AO-vyc"/>
-                                    <constraint firstItem="chy-NF-4YQ" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leading" constant="33" id="Sqo-Sd-UNw"/>
-                                    <constraint firstItem="Pww-SD-IqY" firstAttribute="leading" secondItem="3ku-he-Q0S" secondAttribute="leading" id="ZGb-fc-2n0"/>
-                                    <constraint firstItem="AOK-WW-TR5" firstAttribute="top" secondItem="pbz-vz-lwl" secondAttribute="bottom" constant="9" id="aSI-AH-dyy"/>
-                                    <constraint firstItem="4uo-zv-GUi" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leading" constant="43" id="abh-yh-6Va"/>
-                                    <constraint firstItem="Is4-2I-Nan" firstAttribute="top" secondItem="TVS-Gq-S13" secondAttribute="bottom" constant="2" id="cGX-9k-JXN"/>
-                                    <constraint firstItem="ne5-3y-KUN" firstAttribute="trailing" secondItem="3ku-he-Q0S" secondAttribute="trailing" id="dAN-uq-NlA"/>
-                                    <constraint firstItem="R2g-Ic-DbP" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leading" constant="40" id="f8E-Kg-1zD"/>
-                                    <constraint firstItem="pbz-vz-lwl" firstAttribute="centerY" secondItem="4m9-DA-a2O" secondAttribute="centerY" id="g21-aj-xug"/>
-                                    <constraint firstItem="TVS-Gq-S13" firstAttribute="leading" secondItem="pbz-vz-lwl" secondAttribute="leading" id="g8d-0i-bEJ"/>
-                                    <constraint firstItem="3ku-he-Q0S" firstAttribute="top" secondItem="Pww-SD-IqY" secondAttribute="bottom" constant="4" id="hBv-In-sxf"/>
-                                    <constraint firstItem="iqn-W0-jtM" firstAttribute="trailing" secondItem="ne5-3y-KUN" secondAttribute="trailing" id="i3R-cy-SzD"/>
-                                    <constraint firstItem="TVS-Gq-S13" firstAttribute="top" secondItem="pbz-vz-lwl" secondAttribute="bottom" constant="3" id="mnh-uH-Ua2"/>
-                                    <constraint firstItem="pbz-vz-lwl" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leadingMargin" id="mqC-DW-May"/>
-                                    <constraint firstItem="R2g-Ic-DbP" firstAttribute="trailing" secondItem="4uo-zv-GUi" secondAttribute="trailing" id="mvQ-UV-FJU"/>
-                                    <constraint firstItem="ne5-3y-KUN" firstAttribute="leading" secondItem="3ku-he-Q0S" secondAttribute="leading" id="oPf-8Q-70W"/>
-                                    <constraint firstItem="Is4-2I-Nan" firstAttribute="top" secondItem="AOK-WW-TR5" secondAttribute="bottom" constant="5.5" id="q6g-ax-uF0"/>
-                                    <constraint firstItem="Is4-2I-Nan" firstAttribute="top" secondItem="Sfs-jU-OA6" secondAttribute="top" constant="114" id="sFD-Bc-YZb"/>
-                                    <constraint firstItem="4m9-DA-a2O" firstAttribute="leading" secondItem="Sfs-jU-OA6" secondAttribute="leading" constant="45" id="umR-Cu-Hem"/>
-                                    <constraint firstItem="R2g-Ic-DbP" firstAttribute="top" secondItem="ne5-3y-KUN" secondAttribute="bottom" constant="12" id="wds-dc-Mac"/>
-                                    <constraint firstItem="VEW-aO-rpn" firstAttribute="centerY" secondItem="Is4-2I-Nan" secondAttribute="centerY" id="zNh-pf-xvP"/>
-                                </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcf-Oh-9qz">
                                 <rect key="frame" x="-5" y="55" width="380" height="612"/>
@@ -820,7 +816,10 @@
     </scenes>
     <resources>
         <image name="AR.png" width="306.75" height="267.75"/>
+        <image name="Banks" width="200" height="200"/>
         <image name="JDFront" width="3024" height="4032"/>
+        <image name="MovieTheather" width="512" height="512"/>
+        <image name="Museum" width="512" height="512"/>
         <image name="building" width="840" height="859"/>
         <image name="first" width="30" height="30"/>
         <image name="floor1map" width="921" height="759"/>
@@ -830,6 +829,7 @@
         <image name="gas" width="512" height="512"/>
         <image name="hotels" width="512" height="512"/>
         <image name="library" width="512" height="512"/>
+        <image name="malls" width="512" height="512"/>
         <image name="matty.png" width="90" height="72"/>
         <image name="menu" width="144" height="151"/>
         <image name="parks" width="512" height="512"/>

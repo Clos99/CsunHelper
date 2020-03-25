@@ -229,6 +229,42 @@ class ViewController: UIViewController  {
         sch = true
     }
     
+    @IBAction func mallsClicked(_ sender: Any) {
+           optionString = "Malls"
+           turnOnPins(schoolPins)
+           leading.constant = -30
+           trailing.constant = 0
+           menuOut = false
+           sch = true
+    }
+    
+    @IBAction func banksClicked(_ sender: Any) {
+           optionString = "Banks"
+           turnOnPins(schoolPins)
+           leading.constant = -30
+           trailing.constant = 0
+           menuOut = false
+           sch = true
+    }
+    
+    @IBAction func movieTClicked(_ sender: Any) {
+           optionString = "Movie Theathers"
+           turnOnPins(schoolPins)
+           leading.constant = -30
+           trailing.constant = 0
+           menuOut = false
+           sch = true
+    }
+    
+    @IBAction func MuseumClicked(_ sender: Any) {
+           optionString = "Museums"
+           turnOnPins(schoolPins)
+           leading.constant = -30
+           trailing.constant = 0
+           menuOut = false
+           sch = true
+    }
+    
     @IBAction func menuOptions(_ sender: Any) {
         if menuOut == false{
             leading.constant = 170

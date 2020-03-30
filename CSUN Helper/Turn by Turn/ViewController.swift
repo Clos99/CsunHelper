@@ -45,6 +45,10 @@ class ViewController: UIViewController  {
     var parkPins: [CustomPointAnnotation] = []
     var hotelPins: [CustomPointAnnotation] = []
     var schoolPins: [CustomPointAnnotation] = []
+    var mallPins: [CustomPointAnnotation] = []
+    var bankPins: [CustomPointAnnotation] = []
+    var moviePins: [CustomPointAnnotation] = []
+    var museumPins: [CustomPointAnnotation] = []
     
     var optionString = ""
    
@@ -62,8 +66,23 @@ class ViewController: UIViewController  {
     var hot = false
     var par = false
     var sch = false
+    var mal = false
+    var ban = false
+    var mov = false
+    var mus = false
     
     var eduOn = false
+    var gasOn = false
+    var resOn = false
+    var libOn = false
+    var parOn = false
+    var hotOn = false
+    var schOn = false
+    var malOn = false
+    var banOn = false
+    var movOn = false
+    var musOn = false
+    
     
     func turnOnPins(_ buildingPins: [CustomPointAnnotation]){
         for pin in buildingPins {
@@ -196,93 +215,204 @@ class ViewController: UIViewController  {
     }
     
     @IBAction func gasClicked(_ sender: Any) {
-        optionString = "Gas Station"
-        turnOnPins(gasPins)
-        leading.constant = -30
-        trailing.constant = 0
-        menuOut = false
-        gas = true
+        if (gasOn == false){
+            optionString = "Gas Station"
+            turnOnPins(gasPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            gas = true
+            gasOn = true
+        }
+        else {
+            optionString = ""
+            turnOffPins(gasPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            gas = false
+            gasOn = false
+        }
     }
     
     @IBAction func restaurantClicked(_ sender: Any) {
-        optionString = "Restaurant"
-        turnOnPins(restaurantPins)
-        leading.constant = -30
-        trailing.constant = 0
-        menuOut = false
-        res = true
+        if (resOn == false){
+            optionString = "Restaurant"
+            turnOnPins(restaurantPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            res = true
+            resOn = true
+        } else {
+            optionString = ""
+            turnOffPins(restaurantPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            res = false
+            resOn = false
+        }
     }
     
     @IBAction func librarytClicked(_ sender: Any) {
-        optionString = "Libraries"
-        turnOnPins(libraryPins)
-        leading.constant = -30
-        trailing.constant = 0
-        menuOut = false
-        lib = true
+        if (libOn == false) {
+            optionString = "Libraries"
+            turnOnPins(libraryPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            lib = true
+            libOn = true
+        } else {
+            optionString = ""
+            turnOffPins(libraryPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            lib = false
+            libOn = false
+        }
     }
     
     @IBAction func parkClicked(_ sender: Any) {
-        optionString = "Parks"
-        turnOnPins(parkPins)
-        leading.constant = -30
-        trailing.constant = 0
-        menuOut = false
-        par = true
+        if (parOn == false){
+            optionString = "Parks"
+            turnOnPins(parkPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            par = true
+            parOn = true
+        } else {
+            optionString = ""
+            turnOffPins(parkPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            par = false
+            parOn = false
+        }
     }
     
     @IBAction func HotelClicked(_ sender: Any) {
-        optionString = "Hotels"
-        turnOnPins(hotelPins)
-        leading.constant = -30
-        trailing.constant = 0
-        menuOut = false
-        hot = true
+        if (hotOn == false) {
+            optionString = "Hotels"
+            turnOnPins(hotelPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            hot = true
+            hotOn = true
+        } else {
+            optionString = ""
+            turnOffPins(hotelPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            hot = false
+            hotOn = false
+        }
     }
     
     @IBAction func schoolClicked(_ sender: Any) {
-        optionString = "Schools"
-        turnOnPins(schoolPins)
-        leading.constant = -30
-        trailing.constant = 0
-        menuOut = false
-        sch = true
+        if (schOn == false) {
+            optionString = "Schools"
+            turnOnPins(schoolPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            sch = true
+            schOn = true
+        } else {
+            optionString = ""
+            turnOffPins(schoolPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            sch = false
+            schOn = false
+        }
     }
     
     @IBAction func mallsClicked(_ sender: Any) {
+        if(malOn == false){
            optionString = "Malls"
-           turnOnPins(schoolPins)
+           turnOnPins(mallPins)
            leading.constant = -30
            trailing.constant = 0
            menuOut = false
-           sch = true
+           mal = true
+           malOn = true
+        } else {
+            optionString = ""
+            turnOffPins(mallPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            mal = false
+            malOn = false
+        }
     }
     
     @IBAction func banksClicked(_ sender: Any) {
+        if (banOn == false){
            optionString = "Banks"
-           turnOnPins(schoolPins)
+           turnOnPins(bankPins)
            leading.constant = -30
            trailing.constant = 0
            menuOut = false
-           sch = true
+           ban = true
+           banOn = true
+        } else {
+            optionString = ""
+            turnOffPins(bankPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            ban = false
+            banOn = false
+        }
     }
     
     @IBAction func movieTClicked(_ sender: Any) {
+        if (movOn == false){
            optionString = "Movie Theathers"
-           turnOnPins(schoolPins)
+           turnOnPins(moviePins)
            leading.constant = -30
            trailing.constant = 0
            menuOut = false
-           sch = true
+           mov = true
+           movOn = true
+        } else {
+            optionString = ""
+            turnOffPins(moviePins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            mov = false
+            movOn = false
+        }
     }
     
     @IBAction func MuseumClicked(_ sender: Any) {
+        if (musOn == false){
            optionString = "Museums"
-           turnOnPins(schoolPins)
+           turnOnPins(museumPins)
            leading.constant = -30
            trailing.constant = 0
            menuOut = false
-           sch = true
+           mus = true
+           musOn = true
+        } else {
+            optionString = ""
+            turnOffPins(museumPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            mus = false
+            musOn = false
+        }
     }
     
     @IBAction func menuOptions(_ sender: Any) {

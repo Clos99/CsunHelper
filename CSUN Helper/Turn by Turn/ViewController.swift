@@ -63,10 +63,18 @@ class ViewController: UIViewController  {
     var par = false
     var sch = false
     
+    var eduOn = false
+    
     func turnOnPins(_ buildingPins: [CustomPointAnnotation]){
         for pin in buildingPins {
             //mapView.addAnnotation(pins.title() as !MKAnnotation)
             mapView.addAnnotation(pin)
+        }
+    }
+    
+    func turnOffPins(_ buildingPins:[CustomPointAnnotation]){
+        for pin in buildingPins {
+            mapView.removeAnnotation(pin)
         }
     }
     
@@ -166,12 +174,24 @@ class ViewController: UIViewController  {
     
     @IBAction func educationalClicked(_ sender: Any) {
         //need to test
-        optionString = "Educational Building"
-        turnOnPins(eduPins)
-        leading.constant = -30
-        trailing.constant = 0
-        menuOut = false
-        lec = true
+        if (eduOn == false){
+            optionString = "Educational Building"
+            turnOnPins(eduPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            lec = true
+            eduOn = true
+        }
+        else {
+            optionString = ""
+            turnOffPins(eduPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            lec = false
+            eduOn = false
+        }
         
     }
     

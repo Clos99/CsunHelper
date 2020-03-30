@@ -19,28 +19,162 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfs-jU-OA6">
                                 <rect key="frame" x="0.0" y="55" width="375" height="515"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-WW-TR5">
-                                        <rect key="frame" x="21" y="58" width="88" height="29"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="building" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-vz-lwl">
+                                        <rect key="frame" x="8" y="31" width="37" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Restaurants"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOK-WW-TR5">
+                                        <rect key="frame" x="38" y="79" width="95" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title=" Restaurants">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n4u-Rb-vKn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-aO-rpn">
-                                        <rect key="frame" x="21" y="85" width="93" height="29"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gas" translatesAutoresizingMaskIntoConstraints="NO" id="Is4-2I-Nan">
+                                        <rect key="frame" x="7" y="114" width="37" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Gas Stations"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="TVS-Gq-S13">
+                                        <rect key="frame" x="8" y="73" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-Dx-7ea">
+                                        <rect key="frame" x="33" y="378" width="95" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Museums">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="MuseumClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCs-jq-ktL"/>
+                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slc-IA-MBi"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hotels" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-he-Q0S">
+                                        <rect key="frame" x="9" y="196" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idh-ku-Z6F">
+                                        <rect key="frame" x="36" y="418" width="95" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Theaters">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="movieTClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDG-re-gzu"/>
+                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0rs-up-42F"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parks" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-3y-KUN">
+                                        <rect key="frame" x="9" y="239" width="37" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-7K-RhG">
+                                        <rect key="frame" x="45" y="205" width="54" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Hotels">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="HotelClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9s-mp-1w3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMD-AZ-ul8">
+                                        <rect key="frame" x="20" y="473" width="95" height="29.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Malls">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mallsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFc-to-uCX"/>
+                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucv-oR-MQt"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="malls" translatesAutoresizingMaskIntoConstraints="NO" id="nOd-oe-dUs" userLabel="Malls">
+                                        <rect key="frame" x="9" y="463" width="37" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Banks" translatesAutoresizingMaskIntoConstraints="NO" id="xiw-MR-nzy" userLabel="Banks">
+                                        <rect key="frame" x="9" y="322" width="37" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-Ic-DbP">
+                                        <rect key="frame" x="40" y="291" width="72" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Schools">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="schoolClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cUJ-6b-6L3"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schools" translatesAutoresizingMaskIntoConstraints="NO" id="iqn-W0-jtM">
+                                        <rect key="frame" x="9" y="281.5" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Museum" translatesAutoresizingMaskIntoConstraints="NO" id="C4u-zO-XnP">
+                                        <rect key="frame" x="8" y="368" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-nV-igc">
+                                        <rect key="frame" x="33" y="331" width="72" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Banks">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="banksClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XQE-Ob-xIi"/>
+                                            <action selector="schoolClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Doy-dh-XjE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-NF-4YQ">
+                                        <rect key="frame" x="33" y="244" width="69" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Parks">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="parkClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQs-qo-LR9"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MovieTheather" translatesAutoresizingMaskIntoConstraints="NO" id="ZiJ-mA-adZ" userLabel="Movie">
+                                        <rect key="frame" x="9" y="416" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="library" translatesAutoresizingMaskIntoConstraints="NO" id="Pww-SD-IqY">
+                                        <rect key="frame" x="9" y="153" width="37" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-aO-rpn">
+                                        <rect key="frame" x="45" y="115.5" width="87" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Gas Stations">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="gasClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzV-IR-crK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-DA-a2O">
-                                        <rect key="frame" x="21" y="31" width="103" height="28"/>
+                                        <rect key="frame" x="45" y="35.5" width="98" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Lectures Halls"/>
+                                        <state key="normal" title="Lectures Halls">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="educationalClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTM-VK-FiZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uo-zv-GUi">
+                                        <rect key="frame" x="43" y="159" width="69" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Libraries">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="librarytClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o08-D2-378"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -76,6 +210,7 @@
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="camera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="huB-jx-FxH"/>
                                     <segue destination="Ol3-0A-9CU" kind="show" id="jBN-7K-1an"/>
                                 </connections>
                             </button>
@@ -681,14 +816,25 @@
     </scenes>
     <resources>
         <image name="AR.png" width="306.75" height="267.75"/>
+        <image name="Banks" width="200" height="200"/>
         <image name="JDFront" width="3024" height="4032"/>
+        <image name="MovieTheather" width="512" height="512"/>
+        <image name="Museum" width="512" height="512"/>
+        <image name="building" width="840" height="859"/>
         <image name="first" width="30" height="30"/>
         <image name="floor1map" width="921" height="759"/>
         <image name="floor2map" width="1114" height="726"/>
         <image name="floor3map" width="1918" height="667"/>
         <image name="floor4map" width="1919" height="655"/>
+        <image name="gas" width="512" height="512"/>
+        <image name="hotels" width="512" height="512"/>
+        <image name="library" width="512" height="512"/>
+        <image name="malls" width="512" height="512"/>
         <image name="matty.png" width="90" height="72"/>
         <image name="menu" width="144" height="151"/>
+        <image name="parks" width="512" height="512"/>
+        <image name="restaurant" width="512" height="512"/>
+        <image name="schools" width="512" height="512"/>
         <image name="second" width="30" height="30"/>
         <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
     </resources>

@@ -119,6 +119,7 @@
 		91FF42CD2377F0D200C24FE9 /* Floor4Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor4Map.swift; sourceTree = "<group>"; };
 		91FF42CE2377F0D300C24FE9 /* Floor1Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor1Map.swift; sourceTree = "<group>"; };
 		91FF42D22377F0E400C24FE9 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		F7E4B1D82432883400803E5A /* university_plaza.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = university_plaza.gpx; path = ../../../../Downloads/university_plaza.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +137,7 @@
 		5AC2B3761EFF6561007AF914 = {
 			isa = PBXGroup;
 			children = (
+				F7E4B1D82432883400803E5A /* university_plaza.gpx */,
 				5AC2B3811EFF6561007AF914 /* Turn by Turn */,
 				5AC2B3801EFF6561007AF914 /* Products */,
 				91D2DA502378DBB000D99EBD /* Pods */,

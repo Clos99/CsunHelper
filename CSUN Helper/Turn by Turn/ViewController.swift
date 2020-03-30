@@ -325,210 +325,276 @@ class ViewController: UIViewController  {
         locationManager.startUpdatingLocation()
 
         //Possible function to make this all easier, need to test.
-        /*
-        func setPins(locationCoordinates: String, longitude: Double, latitude: Double, locationPin: CustomPointAnnotation, locationName: String, locationImage: String, buildingType: String){
+        
+        func setPins(longitude: Double, latitude: Double, locationPin: CustomPointAnnotation, locationName: String, locationImage: String){
             let locationCoordinates = CLLocationCoordinate2DMake(longitude, latitude)
             locationPin.coordinate = locationCoordinates
             locationPin.title = locationName
             locationPin.imageName = locationImage
-            eduPins[buildingType] = locationName
-        }*/
- 
- 
+           
+        }
         
-        let jacarandaCoordinates = CLLocationCoordinate2DMake(34.241153, -118.528926)
-        jacarandaPin.coordinate = jacarandaCoordinates
-        jacarandaPin.title = "Jacaranda Hall"
-        jacarandaPin.imageName = "Jacaranda Hall.png"
+        setPins(longitude: 34.241153, latitude: -118.528926, locationPin: jacarandaPin, locationName: "Jacaranda Hall", locationImage: "Jacaranda Hall.png")
+       
+        
+        setPins(longitude: 34.240032, latitude: -118.529318, locationPin: libraryPin, locationName: "Oviatt Library", locationImage: "oviatt.png")
+       
+        
+        setPins(longitude: 34.240479, latitude: -118.530862, locationPin: bayramianPin, locationName: "Bayramian Hall", locationImage: "bayramian.png")
+        
+        setPins(longitude: 34.238448, latitude: -118.528219, locationPin: liveOakPin, locationName: "Live Oak Hall", locationImage: "live oak.png")
+        
+        setPins(longitude: 34.240639, latitude: -118.528243, locationPin: sequoiaPin, locationName: "Sequia Hall", locationImage: "sequia.png")
+        
+        setPins(longitude: 34.23842, latitude: -118.527128, locationPin: chaparralPin, locationName: "Chaparral Hall", locationImage: "chaparall.png")
+        
+        setPins(longitude: 34.239096, latitude: -118.528073, locationPin: citrusPin, locationName: "Citrus Hall", locationImage: "citrus.png")
+        
+        setPins(longitude: 34.238730, latitude: -118.528118, locationPin: eucalyptusPin, locationName: "Eucalyptus Hall", locationImage: "Eucalyptus.png")
+        
+        setPins(longitude: 34.242014, latitude: -118.530814, locationPin: booksteinPin, locationName: "Bookstein Hall", locationImage: "bookstein.png")
+        
+        setPins(longitude: 34.23619, latitude: -118.529698, locationPin: cypressPin, locationName: "Cypress Hall", locationImage: "cypress.png")
+        
+        setPins(longitude: 34.236381, latitude: -118.530644, locationPin: nordhoffPin, locationName: "Nordhoff Hall", locationImage: "nordhoff.png")
+        
+        setPins(longitude: 34.242042, latitude: -118.526355, locationPin: redwoodPin, locationName: "Redwood Hall", locationImage: "redwood.png")
+        
+        setPins(longitude: 34.235926, latitude: -118.528006, locationPin: valleyPin, locationName: "Younes and Soraya Nazarian Center for the Performing Arts", locationImage: "valley.png")
+        
+        setPins(longitude: 34.242549, latitude: -118.528469, locationPin: sagebrushPin, locationName: "Sagebrush Hall", locationImage: "sagebrush.png")
+        
+        
+        setPins(longitude: 34.238220, latitude: -118.530790, locationPin: sierraPin, locationName: "Sierra Hall", locationImage: "sierra.png")
+        
+        
+        setPins(longitude: 34.239856, latitude: -118.524904, locationPin: srcPin, locationName: "Student Recreation Center", locationImage: "src.png")
+        
+        
+        setPins(longitude: 34.240049, latitude: -118.525809, locationPin: usuPin, locationName: "University Student Union", locationImage: "usu.png")
+        
+        
+        setPins(longitude: 34.2358, latitude: -118.5348, locationPin: wabaPin, locationName: "WaBa Grill", locationImage: "Jacaranda Hall.png")
+        
+        //        wabaPin.imageName = "*insert waba grill photo*"
+        
+        setPins(longitude: 34.2358, latitude: -118.5348, locationPin: ufcGymPin, locationName: "UFC GYM Northridge", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.2374, latitude: -118.5079, locationPin: dearbparkPin, locationName: "Dearborn Park", locationImage: "Jacaranda Hall.png")
+        
+        
+        setPins(longitude: 34.2412, latitude: -118.5579, locationPin: northridgePacificTheaterPin, locationName: "Northridge Pacific Theaters", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.2355, latitude: -118.5443, locationPin: sanfernMuseumPin, locationName: "The Musuem of the San Fernando Valley", locationImage: "Jacaranda Hall.png")
+        //mapView.addAnnotation(sanfernMuseumPin)
+        
+        setPins(longitude: 34.2295, latitude: -118.5671, locationPin: lilfreeLibraryPin, locationName: "Little Free Library", locationImage: "Jacarand Hall.png")
+        
+        
+        setPins(longitude: 34.2246, latitude: -118.5234, locationPin: northridgemiddleSchoolPin, locationName: "Northirdge Middle School", locationImage: "Jacranda Hall.png")
+        
+        setPins(longitude: 34.2367, latitude: -118.5370, locationPin: northridgeunicenterPin, locationName: "Northridge University Center", locationImage: "Jacaranda Hall.png")
+        
+        
+        setPins(longitude: 34.2399, latitude: -118.5264, locationPin: wellsfargoPin, locationName: "Wells Fargo Bank", locationImage: "Jacaranda Hall.png")
+        //mapView.addAnnotation(wellsfargoPin)
+        
+        
+        setPins(longitude: 34.2357, latitude: -118.5272, locationPin: gas76Pin, locationName: "76", locationImage: "Jacaranda Hall.png")
+        
+//        let jacarandaCoordinates = CLLocationCoordinate2DMake(34.241153, -118.528926)
+//        jacarandaPin.coordinate = jacarandaCoordinates
+//        jacarandaPin.title = "Jacaranda Hall"
+//        jacarandaPin.imageName = "Jacaranda Hall.png"
         eduPins.append(jacarandaPin)
         //mapView.addAnnotation(jacarandaPin)
         
-        let libraryCoordinates = CLLocationCoordinate2DMake(34.240032, -118.529318)
-        libraryPin.coordinate = libraryCoordinates
-        libraryPin.title = "Oviatt Library"
-        libraryPin.imageName = "oviatt.png"
+//        let libraryCoordinates = CLLocationCoordinate2DMake(34.240032, -118.529318)
+//        libraryPin.coordinate = libraryCoordinates
+//        libraryPin.title = "Oviatt Library"
+//        libraryPin.imageName = "oviatt.png"
         eduPins.append(libraryPin)
         //mapView.addAnnotation(libraryPin)
         
-        let bayramianCoordinates = CLLocationCoordinate2DMake(34.240479, -118.530862)
-        bayramianPin.coordinate = bayramianCoordinates
-        bayramianPin.title = "Bayramian Hall"
-        bayramianPin.imageName = "bayramian.png"
+//        let bayramianCoordinates = CLLocationCoordinate2DMake(34.240479, -118.530862)
+//        bayramianPin.coordinate = bayramianCoordinates
+//        bayramianPin.title = "Bayramian Hall"
+//        bayramianPin.imageName = "bayramian.png"
         eduPins.append(bayramianPin)
         
         //mapView.addAnnotation(bayramianPin)
         
-        let liveOakCoordinates = CLLocationCoordinate2DMake(34.238448, -118.528219)
-        liveOakPin.coordinate = liveOakCoordinates
-        liveOakPin.title = "Live Oak Hall"
-        liveOakPin.imageName = "live oak.png"
+//        let liveOakCoordinates = CLLocationCoordinate2DMake(34.238448, -118.528219)
+//        liveOakPin.coordinate = liveOakCoordinates
+//        liveOakPin.title = "Live Oak Hall"
+//        liveOakPin.imageName = "live oak.png"
         eduPins.append(liveOakPin)
         //mapView.addAnnotation(liveOakPin)
         
-        let sequoiaCoordinates = CLLocationCoordinate2DMake(34.240639, -118.528243)
-        sequoiaPin.coordinate = sequoiaCoordinates
-        sequoiaPin.title = "Sequoia Hall"
-        sequoiaPin.imageName = "sequoia.png"
+//        let sequoiaCoordinates = CLLocationCoordinate2DMake(34.240639, -118.528243)
+//        sequoiaPin.coordinate = sequoiaCoordinates
+//        sequoiaPin.title = "Sequoia Hall"
+//        sequoiaPin.imageName = "sequoia.png"
         eduPins.append(sequoiaPin)
         //mapView.addAnnotation(sequoiaPin)
         
-        let chaparralCoordinates = CLLocationCoordinate2DMake(34.238342, -118.527128)
-        chaparralPin.coordinate = chaparralCoordinates
-        chaparralPin.title = "Chaparral Hall"
-        chaparralPin.imageName = "chaparall.png"
+//        let chaparralCoordinates = CLLocationCoordinate2DMake(34.238342, -118.527128)
+//        chaparralPin.coordinate = chaparralCoordinates
+//        chaparralPin.title = "Chaparral Hall"
+//        chaparralPin.imageName = "chaparall.png"
         eduPins.append(chaparralPin)
         //mapView.addAnnotation(chaparralPin)
         
-        let citrusCoordinates = CLLocationCoordinate2DMake(34.239096, -118.528073)
-        citrusPin.coordinate = citrusCoordinates
-        citrusPin.title = "Citrus Hall"
-        citrusPin.imageName = "citrus.png"
+//        let citrusCoordinates = CLLocationCoordinate2DMake(34.239096, -118.528073)
+//        citrusPin.coordinate = citrusCoordinates
+//        citrusPin.title = "Citrus Hall"
+//        citrusPin.imageName = "citrus.png"
         eduPins.append(citrusPin)
         //mapView.addAnnotation(citrusPin)
         
-        let eucalyptusCoordinates = CLLocationCoordinate2DMake(34.238730, -118.528118)
-        eucalyptusPin.coordinate = eucalyptusCoordinates
-        eucalyptusPin.title = "Eucalyptus Hall"
-        eucalyptusPin.imageName = "Eucalyptus.png"
+//        let eucalyptusCoordinates = CLLocationCoordinate2DMake(34.238730, -118.528118)
+//        eucalyptusPin.coordinate = eucalyptusCoordinates
+//        eucalyptusPin.title = "Eucalyptus Hall"
+//        eucalyptusPin.imageName = "Eucalyptus.png"
         eduPins.append(eucalyptusPin)
         //mapView.addAnnotation(eucalyptusPin)
         
-        let booksteinCoordinates = CLLocationCoordinate2DMake(34.242014, -118.530814)
-        booksteinPin.coordinate = booksteinCoordinates
-        booksteinPin.title = "Bookstein Hall"
-        booksteinPin.imageName = "bookstein.png"
+//        let booksteinCoordinates = CLLocationCoordinate2DMake(34.242014, -118.530814)
+//        booksteinPin.coordinate = booksteinCoordinates
+//        booksteinPin.title = "Bookstein Hall"
+//        booksteinPin.imageName = "bookstein.png"
         eduPins.append(booksteinPin)
         //mapView.addAnnotation(booksteinPin)
         
-        let cypressCoordinates = CLLocationCoordinate2DMake(34.236194, -118.529698)
-        cypressPin.coordinate = cypressCoordinates
-        cypressPin.title = "Cypress Hall"
-        cypressPin.imageName = "cypress.png"
+//        let cypressCoordinates = CLLocationCoordinate2DMake(34.236194, -118.529698)
+//        cypressPin.coordinate = cypressCoordinates
+//        cypressPin.title = "Cypress Hall"
+//        cypressPin.imageName = "cypress.png"
         eduPins.append(cypressPin)
         //mapView.addAnnotation(cypressPin)
         
-        let nordhoffCoordinates = CLLocationCoordinate2DMake(34.236381, -118.530644)
-        nordhoffPin.coordinate = nordhoffCoordinates
-        nordhoffPin.title = "Nordhoff Hall"
-        nordhoffPin.imageName = "nordhoff.png"
+//        let nordhoffCoordinates = CLLocationCoordinate2DMake(34.236381, -118.530644)
+//        nordhoffPin.coordinate = nordhoffCoordinates
+//        nordhoffPin.title = "Nordhoff Hall"
+//        nordhoffPin.imageName = "nordhoff.png"
         eduPins.append(nordhoffPin)
         //mapView.addAnnotation(nordhoffPin)
         
-        let redwoodCoordinates = CLLocationCoordinate2DMake(34.242042, -118.526355)
-        redwoodPin.coordinate = redwoodCoordinates
-        redwoodPin.title = "Redwood Hall"
-        redwoodPin.imageName = "redwood.png"
+//        let redwoodCoordinates = CLLocationCoordinate2DMake(34.242042, -118.526355)
+//        redwoodPin.coordinate = redwoodCoordinates
+//        redwoodPin.title = "Redwood Hall"
+//        redwoodPin.imageName = "redwood.png"
         eduPins.append(redwoodPin)
         
-        let valleyCoordinates = CLLocationCoordinate2DMake(34.235926, -118.528006)
-        valleyPin.coordinate = valleyCoordinates
-        valleyPin.title = "Younes and Soraya Nazarian Center for the Performing Arts"
-        valleyPin.imageName = "valley.png"
+//        let valleyCoordinates = CLLocationCoordinate2DMake(34.235926, -118.528006)
+//        valleyPin.coordinate = valleyCoordinates
+//        valleyPin.title = "Younes and Soraya Nazarian Center for the Performing Arts"
+//        valleyPin.imageName = "valley.png"
         eduPins.append(valleyPin)
         //mapView.addAnnotation(valleyPin)
         
-        let sagebrushCoordinates = CLLocationCoordinate2DMake(34.242549, -118.528469)
-        sagebrushPin.coordinate = sagebrushCoordinates
-        sagebrushPin.title = "Sagebrush Hall"
-        sagebrushPin.imageName = "sagebrush.png"
+//        let sagebrushCoordinates = CLLocationCoordinate2DMake(34.242549, -118.528469)
+//        sagebrushPin.coordinate = sagebrushCoordinates
+//        sagebrushPin.title = "Sagebrush Hall"
+//        sagebrushPin.imageName = "sagebrush.png"
         eduPins.append(sagebrushPin)
         
-        let sierraCoordinates = CLLocationCoordinate2DMake(34.238220, -118.530780)
-        sierraPin.coordinate = sierraCoordinates
-        sierraPin.title = "Sierra Hall"
-        sierraPin.imageName = "sierra.png"
+//        let sierraCoordinates = CLLocationCoordinate2DMake(34.238220, -118.530780)
+//        sierraPin.coordinate = sierraCoordinates
+//        sierraPin.title = "Sierra Hall"
+//        sierraPin.imageName = "sierra.png"
         eduPins.append(sierraPin)
         //mapView.addAnnotation(sierraPin)
         
-        let srcCoordinates = CLLocationCoordinate2DMake(34.239856, -118.524904)
-        srcPin.coordinate = srcCoordinates
-        srcPin.title = "Student Recreation Center"
-        srcPin.imageName = "src.png"
+//        let srcCoordinates = CLLocationCoordinate2DMake(34.239856, -118.524904)
+//        srcPin.coordinate = srcCoordinates
+//        srcPin.title = "Student Recreation Center"
+//        srcPin.imageName = "src.png"
         eduPins.append(srcPin)
         //mapView.addAnnotation(srcPin)
         
-        let usuCoordinates = CLLocationCoordinate2DMake(34.240049, -118.525809)
-        usuPin.coordinate = usuCoordinates
-        usuPin.title = "Student Recreation Center"
-        usuPin.imageName = "usu.png"
+//        let usuCoordinates = CLLocationCoordinate2DMake(34.240049, -118.525809)
+//        usuPin.coordinate = usuCoordinates
+//        usuPin.title = "Student Recreation Center"
+//        usuPin.imageName = "usu.png"
         eduPins.append(usuPin)
         //mapView.addAnnotation(usuPin)
         //userLocation()
         
-       let wabaCoordinates = CLLocationCoordinate2DMake(34.2358, -118.5348)
-        wabaPin.coordinate = wabaCoordinates
-        wabaPin.title = "WaBa Grill"
-        wabaPin.imageName = "Jacaranda Hall.png"
+//       let wabaCoordinates = CLLocationCoordinate2DMake(34.2358, -118.5348)
+//        wabaPin.coordinate = wabaCoordinates
+//        wabaPin.title = "WaBa Grill"
+//        wabaPin.imageName = "Jacaranda Hall.png"
         restaurantPins.append(wabaPin)
         //mapView.addAnnotation(wabaPin)
             
 //        wabaPin.imageName = "*insert waba grill photo*"
 
 
-        let ufcGymCoordinates =
-            CLLocationCoordinate2DMake(34.2370, -118.5354)
-        ufcGymPin.coordinate = ufcGymCoordinates
-        ufcGymPin.title = "UFC GYM Northridge"
-        ufcGymPin.imageName = "Jacaranda Hall.png"
+//        let ufcGymCoordinates =
+//            CLLocationCoordinate2DMake(34.2370, -118.5354)
+//        ufcGymPin.coordinate = ufcGymCoordinates
+//        ufcGymPin.title = "UFC GYM Northridge"
+//        ufcGymPin.imageName = "Jacaranda Hall.png"
         //mapView.addAnnotation(ufcGymPin)
         
-        let dearbparkCoordinates =
-            CLLocationCoordinate2DMake(34.2374, -118.5079)
-        dearbparkPin.coordinate = dearbparkCoordinates
-        dearbparkPin.title = "Dearborn Park"
-        dearbparkPin.imageName = "Jacaranda Hall.png"
+//        let dearbparkCoordinates =
+//            CLLocationCoordinate2DMake(34.2374, -118.5079)
+//        dearbparkPin.coordinate = dearbparkCoordinates
+//        dearbparkPin.title = "Dearborn Park"
+//        dearbparkPin.imageName = "Jacaranda Hall.png"
         parkPins.append(dearbparkPin)
         //mapView.addAnnotation(dearbparkPin)
         
-        let northridgePacificTheaterCoordinates =
-            CLLocationCoordinate2DMake(34.2412, -118.5579)
-        northridgePacificTheaterPin.coordinate = northridgePacificTheaterCoordinates
-        northridgePacificTheaterPin.title = "Northridge Pacific Theaters"
-        northridgePacificTheaterPin.imageName = "Jacaranda Hall.png"
+//        let northridgePacificTheaterCoordinates =
+//            CLLocationCoordinate2DMake(34.2412, -118.5579)
+//        northridgePacificTheaterPin.coordinate = northridgePacificTheaterCoordinates
+//        northridgePacificTheaterPin.title = "Northridge Pacific Theaters"
+//        northridgePacificTheaterPin.imageName = "Jacaranda Hall.png"
         //mapView.addAnnotation(northridgePacificTheaterPin)
         
-        let sanfernMuseumCoordinates =
-            CLLocationCoordinate2DMake(34.2355, -118.5443)
-        sanfernMuseumPin.coordinate = sanfernMuseumCoordinates
-        sanfernMuseumPin.title = "The Musuem of the San Fernando Valley"
-        sanfernMuseumPin.imageName = "Jacaranda Hall.png"
+//        let sanfernMuseumCoordinates =
+//            CLLocationCoordinate2DMake(34.2355, -118.5443)
+//        sanfernMuseumPin.coordinate = sanfernMuseumCoordinates
+//        sanfernMuseumPin.title = "The Musuem of the San Fernando Valley"
+//        sanfernMuseumPin.imageName = "Jacaranda Hall.png"
         //mapView.addAnnotation(sanfernMuseumPin)
         
-        let lilfreeLibraryCoordinates =
-            CLLocationCoordinate2DMake(34.2295, -118.5671)
-        lilfreeLibraryPin.coordinate = lilfreeLibraryCoordinates
-        lilfreeLibraryPin.title = "Little Free Library"
-        lilfreeLibraryPin.imageName = "Jacaranda Hall.png"
+//        let lilfreeLibraryCoordinates =
+//            CLLocationCoordinate2DMake(34.2295, -118.5671)
+//        lilfreeLibraryPin.coordinate = lilfreeLibraryCoordinates
+//        lilfreeLibraryPin.title = "Little Free Library"
+//        lilfreeLibraryPin.imageName = "Jacaranda Hall.png"
         libraryPins.append(lilfreeLibraryPin)
         //mapView.addAnnotation(lilfreeLibraryPin)
         
-        let northridgemiddleschoolCoordinates =
-            CLLocationCoordinate2DMake(34.2246, -118.5234)
-        northridgemiddleSchoolPin.coordinate = northridgemiddleschoolCoordinates
-        northridgemiddleSchoolPin.title = "Northridge Middle School"
-        northridgemiddleSchoolPin.imageName = "Jacaranda Hall.png"
+//        let northridgemiddleschoolCoordinates =
+//            CLLocationCoordinate2DMake(34.2246, -118.5234)
+//        northridgemiddleSchoolPin.coordinate = northridgemiddleschoolCoordinates
+//        northridgemiddleSchoolPin.title = "Northridge Middle School"
+//        northridgemiddleSchoolPin.imageName = "Jacaranda Hall.png"
         schoolPins.append(northridgemiddleSchoolPin)
         //mapView.addAnnotation(northridgemiddleSchoolPin)
         
-        let northridgeunicenterCoordinates =
-            CLLocationCoordinate2DMake(34.2367, -118.5370)
-        northridgeunicenterPin.coordinate = northridgeunicenterCoordinates
-        northridgeunicenterPin.title = "Northridge University Center"
-        northridgeunicenterPin.imageName = "Jacaranda Hall.png"
-        //mapView.addAnnotation(northridgeunicenterPin)
-        
-        let wellsfargoCoordinates =
-            CLLocationCoordinate2DMake(34.2399, -118.5264)
-        wellsfargoPin.coordinate = wellsfargoCoordinates
-        wellsfargoPin.title = "Wells Fargo Bank"
-        wellsfargoPin.imageName = "Jacaranda Hall.png"
-        //mapView.addAnnotation(wellsfargoPin)
-        
-        let gas76Coordinates =
-            CLLocationCoordinate2DMake(34.2357, -118.5272)
-        gas76Pin.coordinate = gas76Coordinates
-        gas76Pin.title = "76"
-        gas76Pin.imageName = "Jacaranda Hall.png"
+//        let northridgeunicenterCoordinates =
+//            CLLocationCoordinate2DMake(34.2367, -118.5370)
+//        northridgeunicenterPin.coordinate = northridgeunicenterCoordinates
+//        northridgeunicenterPin.title = "Northridge University Center"
+//        northridgeunicenterPin.imageName = "Jacaranda Hall.png"
+//        //mapView.addAnnotation(northridgeunicenterPin)
+//
+//        let wellsfargoCoordinates =
+//            CLLocationCoordinate2DMake(34.2399, -118.5264)
+//        wellsfargoPin.coordinate = wellsfargoCoordinates
+//        wellsfargoPin.title = "Wells Fargo Bank"
+//        wellsfargoPin.imageName = "Jacaranda Hall.png"
+//        //mapView.addAnnotation(wellsfargoPin)
+//
+//        let gas76Coordinates =
+//            CLLocationCoordinate2DMake(34.2357, -118.5272)
+//        gas76Pin.coordinate = gas76Coordinates
+//        gas76Pin.title = "76"
+//        gas76Pin.imageName = "Jacaranda Hall.png"
         gasPins.append(gas76Pin)
         //mapView.addAnnotation(gas76Pin)
         

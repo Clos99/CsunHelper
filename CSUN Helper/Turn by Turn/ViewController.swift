@@ -71,6 +71,7 @@ class ViewController: UIViewController  {
     var ban = false
     var mov = false
     var mus = false
+    var gym = false
     
     var eduOn = false
     var gasOn = false
@@ -83,6 +84,7 @@ class ViewController: UIViewController  {
     var banOn = false
     var movOn = false
     var musOn = false
+    var gymOn = false
     var OnOffOn = false
     
     
@@ -420,20 +422,20 @@ class ViewController: UIViewController  {
     @IBAction func GymsClicked(_ sender: Any) {
         if (musOn == false){
            optionString = "Gyms"
-           turnOnPins(museumPins)
+           turnOnPins(gymPins)
            leading.constant = -30
            trailing.constant = 0
            menuOut = false
-           mus = true
-           musOn = true
+           gym = true
+           gymOn = true
         } else {
             optionString = ""
-            turnOffPins(museumPins)
+            turnOffPins(gymPins)
             leading.constant = -30
             trailing.constant = 0
             menuOut = false
-            mus = false
-            musOn = false
+            gym = false
+            gymOn = false
         }
     }
     

@@ -37,6 +37,22 @@ class ViewController: UIViewController  {
     var northridgeunicenterPin = CustomPointAnnotation()
     var wellsfargoPin = CustomPointAnnotation()
     var gas76Pin = CustomPointAnnotation()
+    var subwayPin = CustomPointAnnotation()
+    var starrPin = CustomPointAnnotation()
+    var leosPin = CustomPointAnnotation()
+    var stationeryCopyPin = CustomPointAnnotation()
+    var big5Pin = CustomPointAnnotation()
+    var hookahPin = CustomPointAnnotation()
+    var homesmartPin = CustomPointAnnotation()
+    var tmobilePin = CustomPointAnnotation()
+    var cccPin = CustomPointAnnotation()
+    var yoshinoyaPin = CustomPointAnnotation()
+    var fishBowlPin = CustomPointAnnotation()
+    var greatClipsPin = CustomPointAnnotation()
+    var pandaPin = CustomPointAnnotation()
+    var futabaPin = CustomPointAnnotation()
+    var bobaPin = CustomPointAnnotation()
+    var poseidenPin = CustomPointAnnotation()
     
     var eduPins: [CustomPointAnnotation] = []
     var gasPins: [CustomPointAnnotation] = []
@@ -531,6 +547,70 @@ class ViewController: UIViewController  {
         
         
         setPins(longitude: 34.2357, latitude: -118.5272, locationPin: gas76Pin, locationName: "76", locationImage: "Jacaranda Hall.png")
+        
+        
+        setPins(longitude: 34.2370, latitude: -118.5353, locationPin: subwayPin, locationName: "Subway", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.2368, latitude: -118.5355, locationPin: starrPin, locationName: "Starr Beauty", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.2366, latitude: -118.535548, locationPin: leosPin, locationName: "Leo's Jewelry & Watch Repair", locationImage: "Jacarand Hall.png")
+        
+        setPins(longitude: 34.236455, latitude: -118.535429, locationPin: stationeryCopyPin, locationName: "Northridge Stationery Copy Center", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.236245, latitude: -118.535525, locationPin: big5Pin, locationName: "Big 5", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.236113, latitude: -118.535572, locationPin: hookahPin, locationName: "Hookah Source", locationImage: "Jacaranda Hall.png")
+        
+        
+        setPins(longitude: 34.236146, latitude: -118.535255, locationPin: homesmartPin, locationName: "Homesmart", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235950, latitude: -118.535380, locationPin: tmobilePin, locationName: "T-Mobile", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235972, latitude: -118.535208, locationPin: cccPin, locationName: "California Chicken Cafe", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235969, latitude: -118.535080, locationPin: yoshinoyaPin, locationName: "Yoshinoya", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235897, latitude: -118.534750, locationPin: greatClipsPin, locationName: "Great Clips", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235762, latitude: -118.534836, locationPin: fishBowlPin, locationName: "Fishbow Poke Co.", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235705, latitude: -118.534830, locationPin: futabaPin, locationName: "Futaba", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235759, latitude: -118.534721, locationPin: pandaPin, locationName: "Panda Express", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.235799, latitude: -118.534716, locationPin: bobaPin, locationName: "Boba My Tea", locationImage: "Jacaranda Hall.png")
+        
+        setPins(longitude: 34.237074, latitude: -118.534882, locationPin: poseidenPin, locationName: "Posedion Lounge", locationImage: "Jacaranda Hall.png")
+        
+        restaurantPins.append(subwayPin)
+        
+        mallPins.append(starrPin)
+        
+        mallPins.append(leosPin)
+        
+        mallPins.append(stationeryCopyPin)
+        
+        mallPins.append(big5Pin)
+        
+        mallPins.append(homesmartPin)
+        
+        mallPins.append(tmobilePin)
+        
+        restaurantPins.append(cccPin)
+        
+        restaurantPins.append(yoshinoyaPin)
+        
+        mallPins.append(greatClipsPin)
+        
+        restaurantPins.append(fishBowlPin)
+        
+        restaurantPins.append(futabaPin)
+        
+        restaurantPins.append(pandaPin)
+        
+        restaurantPins.append(bobaPin)
+        
+        restaurantPins.append(poseidenPin)
         
 //        let jacarandaCoordinates = CLLocationCoordinate2DMake(34.241153, -118.528926)
 //        jacarandaPin.coordinate = jacarandaCoordinates

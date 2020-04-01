@@ -49,6 +49,7 @@ class ViewController: UIViewController  {
     var bankPins: [CustomPointAnnotation] = []
     var moviePins: [CustomPointAnnotation] = []
     var museumPins: [CustomPointAnnotation] = []
+    var gymPins: [CustomPointAnnotation] = []
     
     var optionString = ""
    
@@ -82,6 +83,7 @@ class ViewController: UIViewController  {
     var banOn = false
     var movOn = false
     var musOn = false
+    var OnOffOn = false
     
     
     func turnOnPins(_ buildingPins: [CustomPointAnnotation]){
@@ -412,6 +414,67 @@ class ViewController: UIViewController  {
             menuOut = false
             mus = false
             musOn = false
+        }
+    }
+    
+    @IBAction func GymsClicked(_ sender: Any) {
+        if (musOn == false){
+           optionString = "Gyms"
+           turnOnPins(museumPins)
+           leading.constant = -30
+           trailing.constant = 0
+           menuOut = false
+           mus = true
+           musOn = true
+        } else {
+            optionString = ""
+            turnOffPins(museumPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            mus = false
+            musOn = false
+        }
+    }
+    
+    
+    @IBAction func OnOffClicked(_ sender: Any) {
+        if (OnOffOn == false){
+           optionString = ""
+           turnOnPins(eduPins)
+           turnOnPins(gasPins)
+           turnOnPins(restaurantPins)
+           turnOnPins(libraryPins)
+           turnOnPins(parkPins)
+           turnOnPins(hotelPins)
+           turnOnPins(schoolPins)
+           turnOnPins(mallPins)
+           turnOnPins(bankPins)
+           turnOnPins(moviePins)
+           turnOnPins(museumPins)
+           turnOnPins(gymPins)
+           leading.constant = -30
+           trailing.constant = 0
+           menuOut = false
+           OnOffOn = true
+        } else {
+            optionString = ""
+            turnOffPins(eduPins)
+            turnOffPins(gasPins)
+            turnOffPins(restaurantPins)
+            turnOffPins(libraryPins)
+            turnOffPins(parkPins)
+            turnOffPins(hotelPins)
+            turnOffPins(schoolPins)
+            turnOffPins(mallPins)
+            turnOffPins(bankPins)
+            turnOffPins(moviePins)
+            turnOffPins(museumPins)
+            turnOffPins(gymPins)
+            leading.constant = -30
+            trailing.constant = 0
+            menuOut = false
+            OnOffOn = false
         }
     }
     

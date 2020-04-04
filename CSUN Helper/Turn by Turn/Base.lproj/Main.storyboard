@@ -49,7 +49,6 @@
                                         </state>
                                         <connections>
                                             <action selector="MuseumClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCs-jq-ktL"/>
-                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slc-IA-MBi"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hotels" translatesAutoresizingMaskIntoConstraints="NO" id="3ku-he-Q0S">
@@ -64,7 +63,6 @@
                                         </state>
                                         <connections>
                                             <action selector="movieTClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDG-re-gzu"/>
-                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0rs-up-42F"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parks" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-3y-KUN">
@@ -89,7 +87,6 @@
                                         </state>
                                         <connections>
                                             <action selector="mallsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFc-to-uCX"/>
-                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucv-oR-MQt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JY4-FV-Mbn">
@@ -99,9 +96,7 @@
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="GymsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zp-Xx-pZq"/>
-                                            <action selector="mallsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smr-5s-01g"/>
-                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F2q-Js-e1H"/>
+                                            <action selector="GymsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRF-Pu-yO2"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="malls" translatesAutoresizingMaskIntoConstraints="NO" id="nOd-oe-dUs" userLabel="Malls">
@@ -115,10 +110,7 @@
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="GymsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AJu-tj-Qr9"/>
                                             <action selector="OnOffClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ruA-ak-0zG"/>
-                                            <action selector="mallsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TxD-ci-Iob"/>
-                                            <action selector="restaurantClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="utc-fp-isN"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gyms" translatesAutoresizingMaskIntoConstraints="NO" id="gmE-Ey-64h" userLabel="Gyms">
@@ -159,7 +151,6 @@
                                         </state>
                                         <connections>
                                             <action selector="banksClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XQE-Ob-xIi"/>
-                                            <action selector="schoolClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Doy-dh-XjE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chy-NF-4YQ">

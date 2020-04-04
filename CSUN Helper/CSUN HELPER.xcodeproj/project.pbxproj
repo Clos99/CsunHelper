@@ -32,6 +32,25 @@
 		915DA219235D2BEC00CB708D /* bookstein.png in Resources */ = {isa = PBXBuildFile; fileRef = 915DA208235D2BEC00CB708D /* bookstein.png */; };
 		915DA21B235D2F7A00CB708D /* matty.png in Resources */ = {isa = PBXBuildFile; fileRef = 915DA21A235D2F7A00CB708D /* matty.png */; };
 		916992E023760DE600076116 /* CSUN Helper Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 916992DF23760DE600076116 /* CSUN Helper Logo.png */; };
+		91B6FF4224391250007E252D /* T-Mobile.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF2F2439124E007E252D /* T-Mobile.png */; };
+		91B6FF4324391250007E252D /* Leo's Jewelry.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF302439124E007E252D /* Leo's Jewelry.png */; };
+		91B6FF4424391250007E252D /* California Chicken Cafe.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF312439124E007E252D /* California Chicken Cafe.png */; };
+		91B6FF4524391250007E252D /* Great Clips.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF322439124F007E252D /* Great Clips.png */; };
+		91B6FF4624391250007E252D /* Yoshinoya Nordhoff & Reseda.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF332439124F007E252D /* Yoshinoya Nordhoff & Reseda.png */; };
+		91B6FF4724391250007E252D /* Homesmart.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF342439124F007E252D /* Homesmart.png */; };
+		91B6FF4824391250007E252D /* subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF352439124F007E252D /* subway.png */; };
+		91B6FF4924391250007E252D /* Panda Express.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF362439124F007E252D /* Panda Express.png */; };
+		91B6FF4A24391250007E252D /* Big 5 Sporting Goods.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF372439124F007E252D /* Big 5 Sporting Goods.png */; };
+		91B6FF4B24391250007E252D /* UFC GYM Northridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF382439124F007E252D /* UFC GYM Northridge.png */; };
+		91B6FF4C24391250007E252D /* WaBa Grill.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF392439124F007E252D /* WaBa Grill.png */; };
+		91B6FF4D24391250007E252D /* Fishbowl Poke Co.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF3A2439124F007E252D /* Fishbowl Poke Co.png */; };
+		91B6FF4E24391250007E252D /* Hookah Source.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF3B2439124F007E252D /* Hookah Source.png */; };
+		91B6FF4F24391250007E252D /* Futaba.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF3C24391250007E252D /* Futaba.png */; };
+		91B6FF5024391250007E252D /* Northridge Stationery Copy Center.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF3D24391250007E252D /* Northridge Stationery Copy Center.png */; };
+		91B6FF5124391250007E252D /* Boba My Tea.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF3E24391250007E252D /* Boba My Tea.png */; };
+		91B6FF5224391250007E252D /* poseidon_restuarant_lounge.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF3F24391250007E252D /* poseidon_restuarant_lounge.png */; };
+		91B6FF5324391250007E252D /* starrBeauty.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF4024391250007E252D /* starrBeauty.png */; };
+		91B6FF5424391250007E252D /* Northridge_Graphic.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF4124391250007E252D /* Northridge_Graphic.png */; };
 		91D2DA532378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA512378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig */; };
 		91D2DA542378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA522378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig */; };
 		91D2DA5A2378DBDD00D99EBD /* RouteSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA552378DBDD00D99EBD /* RouteSegment.swift */; };
@@ -90,6 +109,25 @@
 		915DA208235D2BEC00CB708D /* bookstein.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookstein.png; sourceTree = "<group>"; };
 		915DA21A235D2F7A00CB708D /* matty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matty.png; sourceTree = "<group>"; };
 		916992DF23760DE600076116 /* CSUN Helper Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CSUN Helper Logo.png"; sourceTree = SOURCE_ROOT; };
+		91B6FF2F2439124E007E252D /* T-Mobile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T-Mobile.png"; sourceTree = "<group>"; };
+		91B6FF302439124E007E252D /* Leo's Jewelry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leo's Jewelry.png"; sourceTree = "<group>"; };
+		91B6FF312439124E007E252D /* California Chicken Cafe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "California Chicken Cafe.png"; sourceTree = "<group>"; };
+		91B6FF322439124F007E252D /* Great Clips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Great Clips.png"; sourceTree = "<group>"; };
+		91B6FF332439124F007E252D /* Yoshinoya Nordhoff & Reseda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yoshinoya Nordhoff & Reseda.png"; sourceTree = "<group>"; };
+		91B6FF342439124F007E252D /* Homesmart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Homesmart.png; sourceTree = "<group>"; };
+		91B6FF352439124F007E252D /* subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subway.png; sourceTree = "<group>"; };
+		91B6FF362439124F007E252D /* Panda Express.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Panda Express.png"; sourceTree = "<group>"; };
+		91B6FF372439124F007E252D /* Big 5 Sporting Goods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Big 5 Sporting Goods.png"; sourceTree = "<group>"; };
+		91B6FF382439124F007E252D /* UFC GYM Northridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UFC GYM Northridge.png"; sourceTree = "<group>"; };
+		91B6FF392439124F007E252D /* WaBa Grill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WaBa Grill.png"; sourceTree = "<group>"; };
+		91B6FF3A2439124F007E252D /* Fishbowl Poke Co.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fishbowl Poke Co.png"; sourceTree = "<group>"; };
+		91B6FF3B2439124F007E252D /* Hookah Source.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hookah Source.png"; sourceTree = "<group>"; };
+		91B6FF3C24391250007E252D /* Futaba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Futaba.png; sourceTree = "<group>"; };
+		91B6FF3D24391250007E252D /* Northridge Stationery Copy Center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Northridge Stationery Copy Center.png"; sourceTree = "<group>"; };
+		91B6FF3E24391250007E252D /* Boba My Tea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boba My Tea.png"; sourceTree = "<group>"; };
+		91B6FF3F24391250007E252D /* poseidon_restuarant_lounge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poseidon_restuarant_lounge.png; sourceTree = "<group>"; };
+		91B6FF4024391250007E252D /* starrBeauty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starrBeauty.png; sourceTree = "<group>"; };
+		91B6FF4124391250007E252D /* Northridge_Graphic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Northridge_Graphic.png; sourceTree = "<group>"; };
 		91D2DA512378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-AugmentedReality.release.xcconfig"; sourceTree = "<group>"; };
 		91D2DA522378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-AugmentedReality.debug.xcconfig"; sourceTree = "<group>"; };
 		91D2DA552378DBDD00D99EBD /* RouteSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegment.swift; sourceTree = "<group>"; };
@@ -203,6 +241,25 @@
 				915DA1FA235D2BEC00CB708D /* chaparall.png */,
 				915DA1FB235D2BEC00CB708D /* usu.png */,
 				915DA1FC235D2BEC00CB708D /* cypress.png */,
+				91B6FF372439124F007E252D /* Big 5 Sporting Goods.png */,
+				91B6FF3E24391250007E252D /* Boba My Tea.png */,
+				91B6FF312439124E007E252D /* California Chicken Cafe.png */,
+				91B6FF3A2439124F007E252D /* Fishbowl Poke Co.png */,
+				91B6FF3C24391250007E252D /* Futaba.png */,
+				91B6FF322439124F007E252D /* Great Clips.png */,
+				91B6FF342439124F007E252D /* Homesmart.png */,
+				91B6FF3B2439124F007E252D /* Hookah Source.png */,
+				91B6FF302439124E007E252D /* Leo's Jewelry.png */,
+				91B6FF3D24391250007E252D /* Northridge Stationery Copy Center.png */,
+				91B6FF4124391250007E252D /* Northridge_Graphic.png */,
+				91B6FF362439124F007E252D /* Panda Express.png */,
+				91B6FF3F24391250007E252D /* poseidon_restuarant_lounge.png */,
+				91B6FF4024391250007E252D /* starrBeauty.png */,
+				91B6FF352439124F007E252D /* subway.png */,
+				91B6FF2F2439124E007E252D /* T-Mobile.png */,
+				91B6FF382439124F007E252D /* UFC GYM Northridge.png */,
+				91B6FF392439124F007E252D /* WaBa Grill.png */,
+				91B6FF332439124F007E252D /* Yoshinoya Nordhoff & Reseda.png */,
 				915DA1FD235D2BEC00CB708D /* sierra.png */,
 				915DA1FE235D2BEC00CB708D /* nordhoff.png */,
 				915DA1FF235D2BEC00CB708D /* Jacaranda Hall.png */,
@@ -312,17 +369,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				91D2DA7A2378E61A00D99EBD /* AR.png in Resources */,
+				91B6FF4724391250007E252D /* Homesmart.png in Resources */,
+				91B6FF4D24391250007E252D /* Fishbowl Poke Co.png in Resources */,
+				91B6FF4C24391250007E252D /* WaBa Grill.png in Resources */,
+				91B6FF4B24391250007E252D /* UFC GYM Northridge.png in Resources */,
 				915DA212235D2BEC00CB708D /* sequoia.png in Resources */,
+				91B6FF5324391250007E252D /* starrBeauty.png in Resources */,
 				915DA216235D2BEC00CB708D /* Eucalyptus.png in Resources */,
 				915DA217235D2BEC00CB708D /* redwood.png in Resources */,
 				915DA209235D2BEC00CB708D /* sagebrush.png in Resources */,
+				91B6FF4624391250007E252D /* Yoshinoya Nordhoff & Reseda.png in Resources */,
 				5AC2B38D1EFF6561007AF914 /* LaunchScreen.storyboard in Resources */,
 				915DA211235D2BEC00CB708D /* valley.png in Resources */,
 				91D2DA532378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig in Resources */,
 				915DA21B235D2F7A00CB708D /* matty.png in Resources */,
 				915DA20B235D2BEC00CB708D /* chaparall.png in Resources */,
+				91B6FF4324391250007E252D /* Leo's Jewelry.png in Resources */,
 				915DA20F235D2BEC00CB708D /* nordhoff.png in Resources */,
 				915DA20C235D2BEC00CB708D /* usu.png in Resources */,
+				91B6FF4224391250007E252D /* T-Mobile.png in Resources */,
+				91B6FF4424391250007E252D /* California Chicken Cafe.png in Resources */,
 				915DA210235D2BEC00CB708D /* Jacaranda Hall.png in Resources */,
 				915DA219235D2BEC00CB708D /* bookstein.png in Resources */,
 				915DA213235D2BEC00CB708D /* oviatt.png in Resources */,
@@ -330,14 +396,24 @@
 				91D2DA542378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig in Resources */,
 				915DA218235D2BEC00CB708D /* citrus.png in Resources */,
 				91D2DA752378DBF200D99EBD /* art.scnassets in Resources */,
+				91B6FF5424391250007E252D /* Northridge_Graphic.png in Resources */,
+				91B6FF5124391250007E252D /* Boba My Tea.png in Resources */,
 				5AC2B38A1EFF6561007AF914 /* Assets.xcassets in Resources */,
 				915DA215235D2BEC00CB708D /* live oak.png in Resources */,
+				91B6FF4924391250007E252D /* Panda Express.png in Resources */,
 				915DA20E235D2BEC00CB708D /* sierra.png in Resources */,
+				91B6FF4F24391250007E252D /* Futaba.png in Resources */,
+				91B6FF4A24391250007E252D /* Big 5 Sporting Goods.png in Resources */,
 				5AC2B3881EFF6561007AF914 /* Main.storyboard in Resources */,
 				915DA20A235D2BEC00CB708D /* src.png in Resources */,
 				915DA20D235D2BEC00CB708D /* cypress.png in Resources */,
 				915DA214235D2BEC00CB708D /* bayramian.png in Resources */,
 				91D2DA7C2378F05400D99EBD /* Jacaranda.jpg in Resources */,
+				91B6FF4824391250007E252D /* subway.png in Resources */,
+				91B6FF4524391250007E252D /* Great Clips.png in Resources */,
+				91B6FF5024391250007E252D /* Northridge Stationery Copy Center.png in Resources */,
+				91B6FF4E24391250007E252D /* Hookah Source.png in Resources */,
+				91B6FF5224391250007E252D /* poseidon_restuarant_lounge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

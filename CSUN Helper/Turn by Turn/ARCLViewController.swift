@@ -517,8 +517,14 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
             self.performSegue(withIdentifier: "VC1", sender: self)
         }))
         
-
         
+        let link = "http://google.com"
+        alert.addAction(UIAlertAction(title: "Download",
+                                      style: .default, handler: {
+                                            (action:UIAlertAction!) -> Void in
+                                        UIApplication.shared.openURL(NSURL(string: link)! as URL)
+                                            print("something here... button click or action logging")
+        }))
     }
 
 }

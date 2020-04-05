@@ -56,6 +56,7 @@ class ViewController: UIViewController  {
     var subway = CustomPointAnnotation()
     var tmobile = CustomPointAnnotation()
     var yoshinoya = CustomPointAnnotation()
+    var testCase = CustomPointAnnotation()
     
     
     var eduPins: [CustomPointAnnotation] = []
@@ -651,6 +652,8 @@ class ViewController: UIViewController  {
         
         setPins(longitude: 34.235992, latitude: -118.535082, locationPin: yoshinoya, locationName: "Yoshinoya", locationImage: "Yoshinoya Nordhoff & Reseda.png")
         
+        setPins(longitude: 34.203395, latitude: -118.526041, locationPin: testCase, locationName: "Test Case", locationImage: "Jacaranda Hall.png")
+        
         
         mallPins.append(big5)
         mallPins.append(greatclips)
@@ -660,6 +663,7 @@ class ViewController: UIViewController  {
         mallPins.append(graphic)
         mallPins.append(starbeauty)
         mallPins.append(tmobile)
+        mallPins.append(testCase)
         restaurantPins.append(boba)
         restaurantPins.append(subway)
         restaurantPins.append(california)

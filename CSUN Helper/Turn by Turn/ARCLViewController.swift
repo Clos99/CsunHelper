@@ -518,11 +518,11 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         }))
         
         
-        let link = "http://google.com"
-        alert.addAction(UIAlertAction(title: "Download",
+        let link = URL(string: "http://google.com")
+        alert.addAction(UIAlertAction(title: "Visit Website",
                                       style: .default, handler: {
                                             (action:UIAlertAction!) -> Void in
-                                        UIApplication.shared.openURL(NSURL(string: link)! as URL)
+                                        UIApplication.shared.open(link!, options: [:], completionHandler: nil)
                                             print("something here... button click or action logging")
         }))
     }

@@ -524,8 +524,8 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
                                             (action:UIAlertAction!) -> Void in
                                         UIApplication.shared.open(link!, options: [:], completionHandler: nil)
                                             print("something here... button click or action logging")
+
         }))
     }
-
 }
 

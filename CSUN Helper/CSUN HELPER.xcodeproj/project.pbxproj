@@ -584,7 +584,7 @@
 				DEVELOPMENT_TEAM = HSRV93KA8A;
 				INFOPLIST_FILE = "Turn by Turn/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.csun.helper;
+				PRODUCT_BUNDLE_IDENTIFIER = CSUNH;
 				PRODUCT_NAME = "CSUN Helper";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,7 +598,7 @@
 				DEVELOPMENT_TEAM = HSRV93KA8A;
 				INFOPLIST_FILE = "Turn by Turn/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.csun.helper;
+				PRODUCT_BUNDLE_IDENTIFIER = CSUNH;
 				PRODUCT_NAME = "CSUN Helper";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

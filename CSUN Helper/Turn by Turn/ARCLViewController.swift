@@ -1,5 +1,5 @@
 //
-//  ARCLViewController.swift
+//  ARCL.swift
 //  AugmentedReality
 //
 //  Created by Bibinur on 11/9/19.
@@ -484,23 +484,67 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func presentPOIAlertViewfor(poi: PointOfInterest) {
-        if poi.title == "Jacaranda Hall" {
-        let alert = UIAlertController(title: poi.title+poi.title2,
-                                      message: "",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        print(poi.title)
+        if poi.title == "Pieology Pizzeria"{
+            let alert = UIAlertController(title: poi.title+poi.title2,
+                                                  message: "",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
 
-        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
-            self.selectedPOI = poi
-            self.clearNodesAndRedrawARScene()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
-            
-            self.performSegue(withIdentifier: "VC2", sender: self)
-        }))
+                    alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                        self.selectedPOI = poi
+                        self.clearNodesAndRedrawARScene()
+                    }))
+                    
+                    
+                    let link = URL(string: "http://pieology.com")
+                    alert.addAction(UIAlertAction(title: "Visit Website",
+                                                  style: .default, handler: {
+                                                        (action:UIAlertAction!) -> Void in
+                                                    UIApplication.shared.open(link!, options: [:], completionHandler: nil)
+                                                        print("something here... button click or action logging")
+                    }))
         }
+        
+        if poi.title == "California Chicken Cafe"{
+            let alert = UIAlertController(title: poi.title+poi.title2,
+                                                  message: "",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+
+                    alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                        self.selectedPOI = poi
+                        self.clearNodesAndRedrawARScene()
+                    }))
+                    
+                    
+                    let link = URL(string: "http://califchickencafe.com")
+                    alert.addAction(UIAlertAction(title: "Visit Website",
+                                                  style: .default, handler: {
+                                                        (action:UIAlertAction!) -> Void in
+                                                    UIApplication.shared.open(link!, options: [:], completionHandler: nil)
+                                                        print("something here... button click or action logging")
+                    }))
+        }
+//        if poi.title == "Jacaranda Hall" {
+//        let alert = UIAlertController(title: poi.title+poi.title2,
+//                                      message: "",
+//                                      preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
+//
+//        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+//            self.selectedPOI = poi
+//            self.clearNodesAndRedrawARScene()
+//        }))
+//
+//        alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
+//
+//            self.performSegue(withIdentifier: "VC2", sender: self)
+//        }))
+//        }
         let alert = UIAlertController(title: poi.title+poi.title2,
                                       message: "",
                                       preferredStyle: .alert)
@@ -512,20 +556,20 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
             self.clearNodesAndRedrawARScene()
         }))
         
-        alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
-            
-            self.performSegue(withIdentifier: "VC1", sender: self)
-        }))
+//        alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
+//            
+//            self.performSegue(withIdentifier: "VC1", sender: self)
+//        }))
         
         
-        let link = "http://google.com"
-        alert.addAction(UIAlertAction(title: "Download",
+        let link = URL(string: "http://google.com")
+        alert.addAction(UIAlertAction(title: "Visit Website",
                                       style: .default, handler: {
                                             (action:UIAlertAction!) -> Void in
-                                        UIApplication.shared.openURL(NSURL(string: link)! as URL)
+                                        UIApplication.shared.open(link!, options: [:], completionHandler: nil)
                                             print("something here... button click or action logging")
-
         }))
+        
     }
 }
 

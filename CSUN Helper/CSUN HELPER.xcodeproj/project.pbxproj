@@ -51,8 +51,6 @@
 		91B6FF5224391250007E252D /* poseidon_restuarant_lounge.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF3F24391250007E252D /* poseidon_restuarant_lounge.png */; };
 		91B6FF5324391250007E252D /* starrBeauty.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF4024391250007E252D /* starrBeauty.png */; };
 		91B6FF5424391250007E252D /* Northridge_Graphic.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B6FF4124391250007E252D /* Northridge_Graphic.png */; };
-		91D2DA532378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA512378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig */; };
-		91D2DA542378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 91D2DA522378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig */; };
 		91D2DA5A2378DBDD00D99EBD /* RouteSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA552378DBDD00D99EBD /* RouteSegment.swift */; };
 		91D2DA5B2378DBDD00D99EBD /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA562378DBDD00D99EBD /* PointOfInterest.swift */; };
 		91D2DA5C2378DBDD00D99EBD /* RouteSegmentAnnotationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2DA572378DBDD00D99EBD /* RouteSegmentAnnotationNode.swift */; };
@@ -329,7 +327,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					5AC2B37E1EFF6561007AF914 = {
@@ -381,7 +379,6 @@
 				91B6FF4624391250007E252D /* Yoshinoya Nordhoff & Reseda.png in Resources */,
 				5AC2B38D1EFF6561007AF914 /* LaunchScreen.storyboard in Resources */,
 				915DA211235D2BEC00CB708D /* valley.png in Resources */,
-				91D2DA532378DBB000D99EBD /* Pods-AugmentedReality.release.xcconfig in Resources */,
 				915DA21B235D2F7A00CB708D /* matty.png in Resources */,
 				915DA20B235D2BEC00CB708D /* chaparall.png in Resources */,
 				91B6FF4324391250007E252D /* Leo's Jewelry.png in Resources */,
@@ -393,7 +390,6 @@
 				915DA219235D2BEC00CB708D /* bookstein.png in Resources */,
 				915DA213235D2BEC00CB708D /* oviatt.png in Resources */,
 				916992E023760DE600076116 /* CSUN Helper Logo.png in Resources */,
-				91D2DA542378DBB000D99EBD /* Pods-AugmentedReality.debug.xcconfig in Resources */,
 				915DA218235D2BEC00CB708D /* citrus.png in Resources */,
 				91D2DA752378DBF200D99EBD /* art.scnassets in Resources */,
 				91B6FF5424391250007E252D /* Northridge_Graphic.png in Resources */,
@@ -488,12 +484,16 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -543,12 +543,16 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;

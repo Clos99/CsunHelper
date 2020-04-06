@@ -123,7 +123,7 @@ class ViewController: UIViewController  {
     }
     
     @IBAction func camera(_ sender: Any) {
-        let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+        let sb = storyboard?.instantiateViewController(withIdentifier: "ARcontroller") as! ARCLViewController
         if lec {
             sb.passText = "Lecture Halls"
             present(sb, animated: true, completion: nil)
@@ -202,15 +202,15 @@ class ViewController: UIViewController  {
             hot = false
             
         }
-        sb.passText = "Waba Grill"
-        present(sb, animated: true, completion: nil)
-        lec = false
-        res = false
-        gas = false
-        lib = false
-        hot = false
-        hot = false
-        sch = false
+//        sb.passText = "Waba Grill"
+//        present(sb, animated: true, completion: nil)
+//        lec = false
+//        res = false
+//        gas = false
+//        lib = false
+//        hot = false
+//        hot = false
+//        sch = false
     }
     @IBAction func matadorClicked(_ sender: Any) {
         userLocation()
@@ -663,7 +663,8 @@ class ViewController: UIViewController  {
         mallPins.append(graphic)
         mallPins.append(starbeauty)
         mallPins.append(tmobile)
-        mallPins.append(testCase)
+        
+        restaurantPins.append(testCase)
         restaurantPins.append(boba)
         restaurantPins.append(subway)
         restaurantPins.append(california)

@@ -80,9 +80,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMD-AZ-ul8">
-                                        <rect key="frame" x="20" y="473" width="95" height="29.5"/>
+                                        <rect key="frame" x="27" y="473" width="95" height="29.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Malls">
+                                        <state key="normal" title="Stores">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -181,10 +181,10 @@
                                             <action selector="gasClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzV-IR-crK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-DA-a2O">
-                                        <rect key="frame" x="45" y="35.5" width="98" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="lectureHallsLabels" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-DA-a2O">
+                                        <rect key="frame" x="49" y="35.5" width="90" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Lectures Halls">
+                                        <state key="normal" title="Lecture Halls">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -274,10 +274,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="B9r-Bb-dek"/>
                     <connections>
+                        <outlet property="TheathersLabel" destination="Idh-ku-Z6F" id="CnV-4f-tec"/>
+                        <outlet property="bankLabel" destination="SbA-nV-igc" id="um9-VK-2sM"/>
+                        <outlet property="gasLabel" destination="VEW-aO-rpn" id="mjW-YV-yLm"/>
+                        <outlet property="gymLabel" destination="JY4-FV-Mbn" id="Yqi-53-Bgr"/>
+                        <outlet property="hotelLabel" destination="L2c-7K-RhG" id="mF4-C7-UbL"/>
                         <outlet property="leading" destination="mvK-6T-YzK" id="UFi-sL-nBG"/>
+                        <outlet property="lecLabel" destination="4m9-DA-a2O" id="mVp-l8-HOK"/>
+                        <outlet property="librariesLabel" destination="4uo-zv-GUi" id="yT8-tB-aBl"/>
                         <outlet property="mapView" destination="gcf-Oh-9qz" id="Kek-gV-vLj"/>
                         <outlet property="matadorLocation" destination="sPD-YJ-Uus" id="lJP-pQ-A0p"/>
+                        <outlet property="museumLabel" destination="e5b-Dx-7ea" id="Jm2-9W-pJH"/>
+                        <outlet property="onoffLabel" destination="HPa-Ty-OIO" id="lHJ-Ob-Hr7"/>
+                        <outlet property="parkLabel" destination="chy-NF-4YQ" id="X4q-UJ-ENA"/>
+                        <outlet property="restaurantLabel" destination="AOK-WW-TR5" id="JdP-BH-bqz"/>
+                        <outlet property="schoolLabel" destination="R2g-Ic-DbP" id="RBR-26-WRI"/>
                         <outlet property="searchBar" destination="IEL-NT-xHG" id="7eb-xb-LXK"/>
+                        <outlet property="storeLabel" destination="dMD-AZ-ul8" id="gxb-LM-bRx"/>
                         <outlet property="trailing" destination="N5i-9v-e5L" id="dDZ-To-lik"/>
                     </connections>
                 </viewController>

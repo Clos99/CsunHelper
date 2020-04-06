@@ -9,6 +9,19 @@ class CustomPointAnnotation: MKPointAnnotation{
 
 
 class ViewController: UIViewController  {
+    @IBOutlet weak var restaurantLabel: UIButton!
+    @IBOutlet weak var museumLabel: UIButton!
+    @IBOutlet weak var TheathersLabel: UIButton!
+    @IBOutlet weak var hotelLabel: UIButton!
+    @IBOutlet weak var storeLabel: UIButton!
+    @IBOutlet weak var gymLabel: UIButton!
+    @IBOutlet weak var onoffLabel: UIButton!
+    @IBOutlet weak var schoolLabel: UIButton!
+    @IBOutlet weak var bankLabel: UIButton!
+    @IBOutlet weak var parkLabel: UIButton!
+    @IBOutlet weak var gasLabel: UIButton!
+    @IBOutlet weak var lecLabel: UIButton!
+    @IBOutlet weak var librariesLabel: UIButton!
     
     var jacarandaPin = CustomPointAnnotation()
     var libraryPin = CustomPointAnnotation()
@@ -37,7 +50,6 @@ class ViewController: UIViewController  {
     var northridgeunicenterPin = CustomPointAnnotation()
     var wellsfargoPin = CustomPointAnnotation()
     var gas76Pin = CustomPointAnnotation()
-    
     //plaza
     var big5 = CustomPointAnnotation()
     var boba = CustomPointAnnotation()
@@ -225,6 +237,7 @@ class ViewController: UIViewController  {
             menuOut = false
             lec = true
             eduOn = true
+            lecLabel.setTitleColor(UIColor.gray, for: .normal)
         }
         else {
             optionString = ""
@@ -234,6 +247,7 @@ class ViewController: UIViewController  {
             menuOut = false
             lec = false
             eduOn = false
+            lecLabel.setTitleColor(UIColor.red, for: .normal)
         }
         
     }
@@ -247,6 +261,7 @@ class ViewController: UIViewController  {
             menuOut = false
             gas = true
             gasOn = true
+            gasLabel.setTitleColor(UIColor.gray, for: .normal)
         }
         else {
             optionString = ""
@@ -256,6 +271,7 @@ class ViewController: UIViewController  {
             menuOut = false
             gas = false
             gasOn = false
+            gasLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -268,6 +284,7 @@ class ViewController: UIViewController  {
             menuOut = false
             res = true
             resOn = true
+            restaurantLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(restaurantPins)
@@ -276,6 +293,7 @@ class ViewController: UIViewController  {
             menuOut = false
             res = false
             resOn = false
+            restaurantLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -288,6 +306,7 @@ class ViewController: UIViewController  {
             menuOut = false
             lib = true
             libOn = true
+            librariesLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(libraryPins)
@@ -296,6 +315,7 @@ class ViewController: UIViewController  {
             menuOut = false
             lib = false
             libOn = false
+            librariesLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -308,6 +328,7 @@ class ViewController: UIViewController  {
             menuOut = false
             par = true
             parOn = true
+            parkLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(parkPins)
@@ -316,6 +337,7 @@ class ViewController: UIViewController  {
             menuOut = false
             par = false
             parOn = false
+            parkLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -328,6 +350,7 @@ class ViewController: UIViewController  {
             menuOut = false
             hot = true
             hotOn = true
+            hotelLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(hotelPins)
@@ -336,6 +359,7 @@ class ViewController: UIViewController  {
             menuOut = false
             hot = false
             hotOn = false
+            hotelLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -348,6 +372,7 @@ class ViewController: UIViewController  {
             menuOut = false
             sch = true
             schOn = true
+            schoolLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(schoolPins)
@@ -356,6 +381,7 @@ class ViewController: UIViewController  {
             menuOut = false
             sch = false
             schOn = false
+            schoolLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -368,6 +394,7 @@ class ViewController: UIViewController  {
            menuOut = false
            mal = true
            malOn = true
+           storeLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(mallPins)
@@ -376,6 +403,7 @@ class ViewController: UIViewController  {
             menuOut = false
             mal = false
             malOn = false
+            storeLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -388,6 +416,7 @@ class ViewController: UIViewController  {
            menuOut = false
            ban = true
            banOn = true
+           bankLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(bankPins)
@@ -396,6 +425,7 @@ class ViewController: UIViewController  {
             menuOut = false
             ban = false
             banOn = false
+            bankLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -408,6 +438,7 @@ class ViewController: UIViewController  {
            menuOut = false
            mov = true
            movOn = true
+           TheathersLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(moviePins)
@@ -416,6 +447,7 @@ class ViewController: UIViewController  {
             menuOut = false
             mov = false
             movOn = false
+            TheathersLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -428,6 +460,7 @@ class ViewController: UIViewController  {
            menuOut = false
            mus = true
            musOn = true
+           museumLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(museumPins)
@@ -436,6 +469,7 @@ class ViewController: UIViewController  {
             menuOut = false
             mus = false
             musOn = false
+            museumLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -448,6 +482,7 @@ class ViewController: UIViewController  {
            menuOut = false
            gym = true
            gymOn = true
+           gymLabel.setTitleColor(UIColor.gray, for: .normal)
         } else {
             optionString = ""
             turnOffPins(gymPins)
@@ -456,9 +491,23 @@ class ViewController: UIViewController  {
             menuOut = false
             gym = false
             gymOn = false
+            gymLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
+//    @IBOutlet weak var restaurantLabel: UIButton!
+//    @IBOutlet weak var museumLabel: UIButton!
+//    @IBOutlet weak var TheathersLabel: UIButton!
+//    @IBOutlet weak var hotelLabel: UIButton!
+//    @IBOutlet weak var storeLabel: UIButton!
+//    @IBOutlet weak var gymLabel: UIButton!
+//    @IBOutlet weak var onoffLabel: UIButton!
+//    @IBOutlet weak var schoolLabel: UIButton!
+//    @IBOutlet weak var bankLabel: UIButton!
+//    @IBOutlet weak var parkLabel: UIButton!
+//    @IBOutlet weak var gasLabel: UIButton!
+//    @IBOutlet weak var lecLabel: UIButton!
+//    @IBOutlet weak var librariesLabel: UIButton!
     
     @IBAction func OnOffClicked(_ sender: Any) {
         if (OnOffOn == false){
@@ -479,6 +528,20 @@ class ViewController: UIViewController  {
            trailing.constant = 0
            menuOut = false
            OnOffOn = true
+           onoffLabel.setTitleColor(UIColor.gray, for: .normal)
+           restaurantLabel.setTitleColor(UIColor.gray, for: .normal)
+           museumLabel.setTitleColor(UIColor.gray, for: .normal)
+           TheathersLabel.setTitleColor(UIColor.gray, for: .normal)
+           hotelLabel.setTitleColor(UIColor.gray, for: .normal)
+           gymLabel.setTitleColor(UIColor.gray, for: .normal)
+           schoolLabel.setTitleColor(UIColor.gray, for: .normal)
+           bankLabel.setTitleColor(UIColor.gray, for: .normal)
+           parkLabel.setTitleColor(UIColor.gray, for: .normal)
+           gasLabel.setTitleColor(UIColor.gray, for: .normal)
+           lecLabel.setTitleColor(UIColor.gray, for: .normal)
+           librariesLabel.setTitleColor(UIColor.gray, for: .normal)
+           storeLabel.setTitleColor(UIColor.gray, for: .normal)
+            
         } else {
             optionString = ""
             turnOffPins(eduPins)
@@ -497,6 +560,19 @@ class ViewController: UIViewController  {
             trailing.constant = 0
             menuOut = false
             OnOffOn = false
+            onoffLabel.setTitleColor(UIColor.red, for: .normal)
+            storeLabel.setTitleColor(UIColor.red, for: .normal)
+            restaurantLabel.setTitleColor(UIColor.red, for: .normal)
+            museumLabel.setTitleColor(UIColor.red, for: .normal)
+            TheathersLabel.setTitleColor(UIColor.red, for: .normal)
+            hotelLabel.setTitleColor(UIColor.red, for: .normal)
+            gymLabel.setTitleColor(UIColor.red, for: .normal)
+            schoolLabel.setTitleColor(UIColor.red, for: .normal)
+            bankLabel.setTitleColor(UIColor.red, for: .normal)
+            parkLabel.setTitleColor(UIColor.red, for: .normal)
+            gasLabel.setTitleColor(UIColor.red, for: .normal)
+            lecLabel.setTitleColor(UIColor.red, for: .normal)
+            librariesLabel.setTitleColor(UIColor.red, for: .normal)
         }
     }
     
@@ -528,6 +604,22 @@ class ViewController: UIViewController  {
         super.viewDidLoad()
         self.mapView.delegate = self
 
+        restaurantLabel.setTitleColor(UIColor.red, for: .normal)
+        museumLabel.setTitleColor(UIColor.red, for: .normal)
+        TheathersLabel.setTitleColor(UIColor.red, for: .normal)
+        hotelLabel.setTitleColor(UIColor.red, for: .normal)
+        storeLabel.setTitleColor(UIColor.red, for: .normal)
+        gymLabel.setTitleColor(UIColor.red, for: .normal)
+        onoffLabel.setTitleColor(UIColor.red, for: .normal)
+        schoolLabel.setTitleColor(UIColor.red, for: .normal)
+        bankLabel.setTitleColor(UIColor.red, for: .normal)
+        parkLabel.setTitleColor(UIColor.red, for: .normal)
+        gasLabel.setTitleColor(UIColor.red, for: .normal)
+        lecLabel.setTitleColor(UIColor.red, for: .normal)
+        librariesLabel.setTitleColor(UIColor.red, for: .normal)
+        
+        
+        
         
         let distanceSpan: CLLocationDegrees = 500
         let bsCSUNCAmpusLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(34.241464890869224, -118.52937457790358)

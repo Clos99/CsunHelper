@@ -11,10 +11,12 @@ import CoreLocation
 struct RouteSegment {
     var startLatitude: CLLocationDegrees
     var startLongitude: CLLocationDegrees
-    var startAltitude: CLLocationDistance
+    var startAltitude: CLLocationDegrees
+    //var startAltitude: CLLocationDistance
     
     var endLatitude: CLLocationDegrees
     var endLongitude: CLLocationDegrees
-    var endAltitude: CLLocationDistance
+    var endAltitude: CLLocationDegrees
+    //var endAltitude: CLLocationDistance
     
 }

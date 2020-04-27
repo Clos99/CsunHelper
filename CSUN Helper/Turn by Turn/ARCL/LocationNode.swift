@@ -60,8 +60,7 @@ open class LocationNode: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-open class LocationAnnotationNode: LocationNode {
+ open class LocationAnnotationNode: LocationNode {
     ///An image to use for the annotation
     ///When viewed from a distance, the annotation will be seen at the size provided
     ///e.g. if the size is 100x100px, the annotation will take up approx 100x100 points on screen.
@@ -93,4 +92,3 @@ open class LocationAnnotationNode: LocationNode {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

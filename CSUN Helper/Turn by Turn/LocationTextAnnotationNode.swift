@@ -9,28 +9,33 @@
 import Foundation
 import SceneKit
 import CoreLocation
+import ARKit
 
 open class LocationTextAnnotationNode: LocationNode {
     
     // image and text that are displayed by the child nodes
-    public let image: UIImage
+    //public let image: UIImage
     public let text: String
     
     // child nodes
     public let imageAnnotationNode: SCNNode
     public let textAnnotationNode: SCNNode
     
-    public init(location: CLLocation?, image: UIImage, text: String) {
+    public init(location: CLLocation?, text:String) {//image: UIImage, text: String) {
         self.text = text
-        self.image = image
+        //self.image = image
         
         // create the child node that holds the location's marker image
-        let imagePlane = SCNPlane(width: image.size.width / 100, height: image.size.height / 100)
+        /*let imagePlane = SCNPlane(width: image.size.width / 100, height: image.size.height / 100)
         imagePlane.firstMaterial!.diffuse.contents = image
         imagePlane.firstMaterial!.lightingModel = .constant
-        
+        */
+        let plane = SCNPlane(width: 120.0, height: 24.0)
+        //plane.cornerRadius = 0.5
+        plane.firstMaterial?.isDoubleSided = true
+        plane.firstMaterial?.diffuse.contents = UIColor(red: 74/255.0, green: 35/255.0, blue: 90/255.0, alpha: 0.8)
         imageAnnotationNode = SCNNode()
-        imageAnnotationNode.geometry = imagePlane
+        imageAnnotationNode.geometry = plane//imagePlane
         
         // create the child node that holds the location's name
         let textShape = SCNText(string: text, extrusionDepth: 1)
@@ -61,7 +66,6 @@ open class LocationTextAnnotationNode: LocationNode {
         let max = textAnnotationNode.boundingBox.max
         textAnnotationNode.pivot = SCNMatrix4MakeTranslation((max.x - min.x) / 2, (max.y - min.y), 0);
     }
-    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

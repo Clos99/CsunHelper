@@ -10,11 +10,11 @@ import UIKit
 import MapKit
 import CoreLocation
 import ARKit
+import SafariServices
 
 @available(iOS 11.0, *)
-class ARCLViewController: UIViewController, CLLocationManagerDelegate {
+final class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     
-
     @IBOutlet weak var resetButton: UIButton!
     var locationManager: CLLocationManager!
     var latestLocation: CLLocation?
@@ -24,16 +24,17 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     var pois: [PointOfInterest]!
     var locationAnnotationNode2POI: [LocationTextAnnotationNode: PointOfInterest]!
     var selectedPOI: PointOfInterest?
-    var passText: String!
+    var params: [String]!
     var drawnLocationNodes: [LocationNode]!
-   
+   // check
+
     override func viewDidLoad() {
         super.viewDidLoad()
         toggleResetButtonStatus()
         setupLocation()
         setupPOIs()
-        
         setupARScene()
+        
 
     }
     
@@ -85,13 +86,9 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         resetButton.isEnabled = true
         resetButton.isAccessibilityElement = true
     }
-/*    @IBAction func resetButtonPressed(_ sender: Any) {
-        resetARScene()
-    }*/
     
-
     @IBAction func resetButtonPressed(_ sender: Any) {
-    resetARScene()
+        resetARScene()
     }
     // MARK: AR scene actions
     
@@ -175,119 +172,55 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     
     func getPOIs() {
         // formulate natural language query for nearby POIs
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery = passText
-        request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
-                                            latitudinalMeters: 0.05,
-                                            longitudinalMeters: 0.05)
-        
-        // getting POIs
-        let search = MKLocalSearch(request: request)
-        search.start {
-            (response, error) in
-            
-            guard let response = response else {
-                if let error = error {
-                    // show alert with error and ok button for reset
-                    print("Search error: \(error)")
+        for param in params {
+            let request = MKLocalSearch.Request()
+                   request.naturalLanguageQuery = param
+            request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
+                                                    latitudinalMeters: 2000,
+                                                    longitudinalMeters: 2000)
+                
+                // getting POIs
+                let search = MKLocalSearch(request: request)
+                search.start {
+                    (response, error) in
+                    
+                    guard let response = response else {
+                        if let error = error {
+                            // show alert with error and ok button for reset
+                            print("Search error: \(error)")
 
-                    self.presentConfirmationAlertViewWith(
-                        title: "POIs Error",
-                        message: "Could not fetch POIS near your current location.",
-                        handler: { action in
-                            self.resetARScene()
-                    })
+                            self.presentConfirmationAlertViewWith(
+                                title: "POIs Error",
+                                message: "Could not fetch POIS near your current location.",
+                                handler: { action in
+                                    self.resetARScene()
+                            })
+                        }
+                        return
+                    }
+
+                    // add POIs to AR scene
+                    self.pois = []
+                    self.addPOIsToARScene(response.mapItems)
                 }
-                return
             }
-
-            // add POIs to AR scene
-            self.pois = []
-            self.addPOIsToARScene(response.mapItems)
         }
-    }
-    /*func getMorePOIs() {
-        
-        // formulate natural language query for nearby POIs
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery =  "Educational Buildings"
-        request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
-                                            latitudinalMeters: 0.05,
-                                            longitudinalMeters: 0.05)
-        
-        // getting POIs
-        let search = MKLocalSearch(request: request)
-        search.start {
-            (response, error) in
-            
-            guard let response = response else {
-                if let error = error {
-                    // show alert with error and ok button for reset
-                    print("Search error: \(error)")
-
-                    self.presentConfirmationAlertViewWith(
-                        title: "POIs Error",
-                        message: "Could not fetch POIS near your current location.",
-                        handler: { action in
-                            self.resetARScene()
-                    })
-                }
-                return
-            }
-
-            // add POIs to AR scene
-            self.pois = []
-            self.addPOIsToARScene(response.mapItems)
-        }
-    }
-    func getLibraryPOI() {
-        
-        // formulate natural language query for nearby POIs
-        let request = MKLocalSearch.Request()
-        request.naturalLanguageQuery =  "Academic Library"
-        request.region = MKCoordinateRegion(center: (latestLocation?.coordinate)!,
-                                            latitudinalMeters: 0.05,
-                                            longitudinalMeters: 0.05)
-        
-        // getting POIs
-        let search = MKLocalSearch(request: request)
-        search.start {
-            (response, error) in
-            
-            guard let response = response else {
-                if let error = error {
-                    // show alert with error and ok button for reset
-                    print("Search error: \(error)")
-
-                    self.presentConfirmationAlertViewWith(
-                        title: "POIs Error",
-                        message: "Could not fetch POIS near your current location.",
-                        handler: { action in
-                            self.resetARScene()
-                    })
-                }
-                return
-            }
-
-            // add POIs to AR scene
-            self.pois = []
-            self.addPOIsToARScene(response.mapItems)
-        }
-    }*/
     
     func addPOIsToARScene(_ items: [MKMapItem]) {
         for item in items {
-            let location = CLLocation(coordinate: item.placemark.coordinate, altitude: 300)
+            let location = CLLocation(coordinate: item.placemark.coordinate, altitude: 0)//300)
             let distance = Int( round( self.latestLocation!.distance(from: location) ))
-            let title = "\(item.placemark.name!)"//\(distance) m"
-            let title2 = "\n\(distance) m"
+            if (distance <= 300) {
+            let title = "\(item.placemark.name!)\n\(distance) m"
+            //let title2 = "\n\(distance) m"
             let poi = PointOfInterest(title: title,
-                                      title2: title2,
+                                      //title2: title2,
                                       latitude: location.coordinate.latitude,
                                       longitude: location.coordinate.longitude,
-                                      altitude: 300)
+                                      altitude: location.altitude)//300)
             self.pois.append( poi)
             self.addPOIToARScene(poi)
+            }
         }
     }
     
@@ -374,8 +307,8 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     func addPOIToARScene(_ poi: PointOfInterest) {
         // create node
         let location = CLLocation(latitude: poi.latitude, longitude: poi.longitude)
-        let text = poi.title+poi.title2//.replacingOccurrences(of: ", ", with: "\n")
-        let annotationNode = LocationTextAnnotationNode(location: location, image: UIImage(named: "LocationMarker")!, text: text)
+        let text = poi.title.replacingOccurrences(of: ", ", with: "\n")//+poi.title2
+        let annotationNode = LocationTextAnnotationNode(location: location, text: text)//image: UIImage(named: "LocationMarker")!, text: text)
         
         // add node to AR scene
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
@@ -420,8 +353,8 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func addDestinationPOIToARScene(_ poi: PointOfInterest) {
-        let location = CLLocation(coordinate: CLLocationCoordinate2D(latitude: poi.latitude, longitude: poi.longitude), altitude: 300)
-        let routeAnnotationNode = RouteAnnotationNode(location: location, color: .red)
+        let location = CLLocation(coordinate: CLLocationCoordinate2D(latitude: poi.latitude, longitude: poi.longitude), altitude: poi.altitude) //300)
+        let routeAnnotationNode = RouteAnnotationNode(location: location, color: UIColor.red)
         
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: routeAnnotationNode)
         drawnLocationNodes.append(routeAnnotationNode)
@@ -442,9 +375,8 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
     func drawARScene() {
         
         if selectedPOI == nil {
-            getPOIs()
-            //getMorePOIs()
-            //getLibraryPOI()
+                getPOIs()
+            
         }
         else {
             if latestLocation != nil {
@@ -482,44 +414,371 @@ class ARCLViewController: UIViewController, CLLocationManagerDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
         self.present(alert, animated: true, completion: nil)
     }
-
-    func presentPOIAlertViewfor(poi: PointOfInterest) {
-        if poi.title == "Jacaranda Hall" {
-        let alert = UIAlertController(title: poi.title+poi.title2,
-                                      message: "",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-
-        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
-            self.selectedPOI = poi
-            self.clearNodesAndRedrawARScene()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
-            
-            self.performSegue(withIdentifier: "VC2", sender: self)
-        }))
+    func openPage(action: UIAlertAction) {
+        showSafariVC(for: "https://www.csun.edu/")
+    }
+    func showSafariVC(for url: String) {
+        guard let url = URL(string: url) else {
+            return
         }
-        let alert = UIAlertController(title: poi.title+poi.title2,
-                                      message: "",
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-
-        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
-            self.selectedPOI = poi
-            self.clearNodesAndRedrawARScene()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "General Info", style: .default, handler: { action in
-            
-            self.performSegue(withIdentifier: "VC1", sender: self)
-        }))
-        
-
-        
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true)
     }
 
-}
+
+    func presentPOIAlertViewfor(poi: PointOfInterest) {
+        
+        if poi.title == "UFC GYM Northridge" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.ufcgym.com/locations/northridge/")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Poseidon Lounge" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.yelp.com/biz/poseidon-lounge-northridge-3")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Subway" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "order.subway.com")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Starr Beauty" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.yelp.com/biz/starr-beauty-northridge")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Northridge Graphics & Printing Services" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.yelp.com/biz/northridge-copy-and-graphics-center-northridge-2")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Leo's Jewelry & Watch Repair" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.yelp.com/biz/leos-jewelry-and-watch-repair-northridge")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Northridge Stationery Copy Center" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.yelp.com/biz/northridge-copy-and-graphics-center-northridge-2")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Big 5 Sporting Goods" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.big5sportinggoods.com/store/")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Hookah Source" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.yelp.com/biz/hookah-source-northridge")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "Homesmart" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://homesmart.com/")
+        }))
+        }
+        /**********************************************************************/
+        if poi.title == "T-Mobile" {
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+            self.selectedPOI = poi
+            self.clearNodesAndRedrawARScene()
+        }))
+        //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.t-mobile.com/")
+        }))
+        }
+        /**********************************************************************/
+              if poi.title == "California Chicken Cafe" {
+              let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                            message: "",
+                                            preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+
+              alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                  self.selectedPOI = poi
+                  self.clearNodesAndRedrawARScene()
+              }))
+              //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+              alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+                  (action:UIAlertAction!) -> Void in
+                  self.showSafariVC(for: "https://califchickencafe.com/")
+              }))
+              }
+        /**********************************************************************/
+              if poi.title == "Yoshinoya Nordhoff & Reseda" {
+              let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                            message: "",
+                                            preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+
+              alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                  self.selectedPOI = poi
+                  self.clearNodesAndRedrawARScene()
+              }))
+              //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+              alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+                  (action:UIAlertAction!) -> Void in
+                  self.showSafariVC(for: "https://www.yoshinoyaamerica.com/")
+              }))
+              }
+        /**********************************************************************/
+              if poi.title == "Great Clips" {
+              let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                            message: "",
+                                            preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+
+              alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                  self.selectedPOI = poi
+                  self.clearNodesAndRedrawARScene()
+              }))
+              //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+              alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+                  (action:UIAlertAction!) -> Void in
+                  self.showSafariVC(for: "https://www.greatclips.com/")
+              }))
+              }
+        /**********************************************************************/
+              if poi.title == "Fishbowl Poke Co" {
+              let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                            message: "",
+                                            preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+
+              alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                  self.selectedPOI = poi
+                  self.clearNodesAndRedrawARScene()
+              }))
+              //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+              alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+                  (action:UIAlertAction!) -> Void in
+                  self.showSafariVC(for: "https://www.fishbowlpokeco.com/")
+              }))
+              }
+        /**********************************************************************/
+              if poi.title == "Panda Express" {
+              let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                            message: "",
+                                            preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+
+              alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                  self.selectedPOI = poi
+                  self.clearNodesAndRedrawARScene()
+              }))
+              //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+              alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+                  (action:UIAlertAction!) -> Void in
+                  self.showSafariVC(for: "https://www.pandaexpress.com/")
+              }))
+              }
+        /**********************************************************************/
+              if poi.title == "Futaba" {
+              let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                            message: "",
+                                            preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+
+              alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                  self.selectedPOI = poi
+                  self.clearNodesAndRedrawARScene()
+              }))
+              //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+              alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+                  (action:UIAlertAction!) -> Void in
+                  self.showSafariVC(for: "https://www.yelp.com/biz/futaba-japanese-restaurant-northridge")
+              }))
+              }
+        /**********************************************************************/
+              if poi.title == "WaBa Grill" {
+              let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                            message: "",
+                                            preferredStyle: .alert)
+              alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+              self.present(alert, animated: true, completion: nil)
+
+              alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+                
+                self.selectedPOI = poi
+                  self.clearNodesAndRedrawARScene()
+              }))
+              //alert.addAction(UIAlertAction(title: "Website", style: .default, handler: openPage))
+              alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+                  (action:UIAlertAction!) -> Void in
+                  self.showSafariVC(for: "https://www.wabagrill.com/")
+              }))
+              }
+        
+        let alert = UIAlertController(title: poi.title,//+poi.title2,
+                                      message: "",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+
+        alert.addAction(UIAlertAction(title: "Get directions", style: .default, handler: { action in
+          
+          self.selectedPOI = poi
+          self.clearNodesAndRedrawARScene()
+        }))
+        
+
+        //
+        alert.addAction(UIAlertAction(title: "Website", style: .default, handler:  {
+            (action:UIAlertAction!) -> Void in
+            self.showSafariVC(for: "https://www.csun.edu/")
+        }))
+        
+        
+        
+    }
+    }
+
+
+
+
+
 

@@ -43,9 +43,7 @@ public class SceneLocationView: ARSCNView, ARSCNViewDelegate {
     ///The limit to the scene, in terms of what data is considered reasonably accurate.
     ///Measured in meters.
     private static let sceneLimit = 100.0
-    
     public weak var locationDelegate: SceneLocationViewDelegate?
-    
     ///The method to use for determining locations.
     ///Not advisable to change this as the scene is ongoing.
     public var locationEstimateMethod: LocationEstimateMethod = .mostRelevantEstimate
@@ -514,4 +512,3 @@ extension SceneLocationView: LocationManagerDelegate {
         
     }
 }
-

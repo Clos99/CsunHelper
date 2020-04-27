@@ -70,6 +70,8 @@ class ViewController: UIViewController  {
     var ban = false
     var mov = false
     var mus = false
+    var gym = false
+    var the = false
     
     var eduOn = false
     var gasOn = false
@@ -98,9 +100,9 @@ class ViewController: UIViewController  {
     }
     
     @IBAction func camera(_ sender: Any) {
-        let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
         if lec {
-            sb.passText = "Lecture Halls"
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Lecture Halls"]
             present(sb, animated: true, completion: nil)
             res = false
             gas = false
@@ -108,10 +110,15 @@ class ViewController: UIViewController  {
             hot = false
             par = false
             sch = false
-            
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
         }
         if res {
-            sb.passText = "Restaurants"
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Restaurants"]
             present(sb, animated: true, completion: nil)
             lec = false
             gas = false
@@ -119,10 +126,15 @@ class ViewController: UIViewController  {
             hot = false
             par = false
             sch = false
-            
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
         }
         if gas {
-            sb.passText = "Gas Stations"
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Gas Stations"]
             present(sb, animated: true, completion: nil)
             lec = false
             res = false
@@ -130,10 +142,15 @@ class ViewController: UIViewController  {
             hot = false
             par = false
             sch = false
-            
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
         }
         if lib {
-            sb.passText = "Libraries"
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Libraries"]
             present(sb, animated: true, completion: nil)
             lec = false
             res = false
@@ -141,10 +158,15 @@ class ViewController: UIViewController  {
             hot = false
             par = false
             sch = false
-            
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
         }
         if hot{
-            sb.passText = "Hotels"
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Hotels"]
             present(sb, animated: true, completion: nil)
             lec = false
             res = false
@@ -152,11 +174,15 @@ class ViewController: UIViewController  {
             lib = false
             par = false
             sch = false
-            
-            
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
         }
         if par{
-            sb.passText = "Parks"
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Parks"]
             present(sb, animated: true, completion: nil)
             lec = false
             res = false
@@ -164,29 +190,125 @@ class ViewController: UIViewController  {
             lib = false
             hot = false
             sch = false
-            
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
         }
         if sch {
-            sb.passText = "Schools"
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Schools"]
             present(sb, animated: true, completion: nil)
             lec = false
             res = false
             gas = false
             lib = false
             hot = false
-            hot = false
-            
+            par = false
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
         }
-        sb.passText = "Waba Grill"
+        if ban {
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Banks"]
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            par = false
+            sch = false
+            mus = false
+            the = false
+            mal = false
+            gym = false
+        }
+        if mus {
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Museums"]
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            par = false
+            ban = false
+            sch = false
+            the = false
+            mal = false
+            gym = false
+        }
+        if the {
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Theaters"]
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            par = false
+            ban = false
+            mus = false
+            sch = false
+            mal = false
+            gym = false
+        }
+        if mal {
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Malls"]
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            par = false
+            ban = false
+            mus = false
+            the = false
+            sch = false
+            gym = false
+        }
+        if gym {
+            let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+            sb.params = ["Gyms"]
+            present(sb, animated: true, completion: nil)
+            lec = false
+            res = false
+            gas = false
+            lib = false
+            hot = false
+            par = false
+            ban = false
+            mus = false
+            the = false
+            mal = false
+            sch = false
+        }
+        let sb = storyboard?.instantiateViewController(withIdentifier: "viewcontroller2") as! ARCLViewController
+        sb.params = ["Restaurants", "Gas Stations", "Lecture Halls", "Schools", "Parks", "Hotels", "Libraries", "Banks", "Theaters", "Museums", "Malls", "Gyms" ]
         present(sb, animated: true, completion: nil)
         lec = false
         res = false
         gas = false
         lib = false
         hot = false
-        hot = false
+        par = false
         sch = false
+        ban = false
+        mus = false
+        the = false
+        mal = false
+        gym = false
     }
+    
     @IBAction func matadorClicked(_ sender: Any) {
         userLocation()
     }

@@ -32,7 +32,7 @@ open class RouteSegmentAnnotationNode: LocationNode {
         scaleRelativeToDistance = true
         
         addChildNode(routeNode)
-        addChildNode(textNode)
+        //addChildNode(textNode)
         
     }
     
@@ -48,8 +48,7 @@ class TextNode: SCNNode {
         super.init()
         
         let distance = Int( round( startLocation.distance(from: endLocation)))
-        
-        let textShape = SCNText(string: "\(distance) m", extrusionDepth: 3)
+        let textShape = SCNText(string: "\(distance) m", extrusionDepth: 1) // it was 3
         textShape.firstMaterial!.diffuse.contents = UIColor.white
         textShape.firstMaterial!.specular.contents = UIColor.black
         textShape.firstMaterial!.lightingModel = .phong
@@ -69,11 +68,12 @@ class TextNode: SCNNode {
         let min = textNode.boundingBox.min
         let max = textNode.boundingBox.max
         textNode.pivot = SCNMatrix4MakeTranslation((max.x - min.x) / 2, 0, 0);
-    }
     
+    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+        
 }
 
 class LineNode: SCNNode{
@@ -92,8 +92,9 @@ class LineNode: SCNNode{
         let ndZAlign = SCNNode()
         ndZAlign.eulerAngles.x = Float.pi/2
         
-        let cylgeo = SCNBox(width: 5, height: distance, length: 5, chamferRadius: 0)
-        cylgeo.firstMaterial!.diffuse.contents = UIColor.cyan
+        let cylgeo = SCNBox(width: 1.75, height: distance, length: 1.75, chamferRadius: 0.25)
+        //SCNBox(width: 5, height: distance, length: 5, chamferRadius: 0)
+        cylgeo.firstMaterial!.diffuse.contents = UIColor.green
         cylgeo.firstMaterial!.specular.contents = UIColor.black
         cylgeo.firstMaterial!.lightingModel = .phong
         // cylgeo.firstMaterial!.fillMode = .lines // used for debug purposes
@@ -101,7 +102,6 @@ class LineNode: SCNNode{
         let ndCylinder = SCNNode(geometry: cylgeo)
         ndCylinder.position.y = Float(-distance/2) + 0.001
         ndZAlign.addChildNode(ndCylinder)
-        
         addChildNode(ndZAlign)
         
         constraints = [SCNLookAtConstraint(target: endNode)]

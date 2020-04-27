@@ -14,10 +14,12 @@ open class RouteAnnotationNode: LocationNode {
     
     public let annotationNode: SCNNode
     
-    public init(location: CLLocation, color: UIColor? = .blue) {
+    public init(location: CLLocation, color: UIColor? = UIColor.blue.withAlphaComponent(0.7)) {
         
         
-        let sphere = SCNBox(width: 1, height: 0.0, length: 50, chamferRadius: 0.25)
+        let sphere = SCNSphere(radius: 3)
+        //SCNBox(width: 1, height: 0.0, length: 50, chamferRadius: 0.25)
+        // radius : 5
         sphere.firstMaterial!.diffuse.contents = color
         sphere.firstMaterial!.specular.contents = UIColor.black
         sphere.firstMaterial!.lightingModel = .phong
